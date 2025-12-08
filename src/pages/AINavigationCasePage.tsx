@@ -1,0 +1,491 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet-async';
+import Breadcrumbs from '../components/Breadcrumbs';
+import { CaseFeedbackPrompt } from '../components/feedback/CaseFeedbackPrompt';
+
+const AINavigationCasePage: React.FC = () => {
+  const [researchExpanded, setResearchExpanded] = useState(false);
+
+  return (
+    <>
+      <Helmet>
+        <title>AI Navigation Engine - Carl Wahlen</title>
+        <meta name="description" content="Prototype for intent-based navigation enabling users to search naturally, without knowing the website's structure or terminology." />
+        
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://carlwahlen.com/case/ai-navigation" />
+        <meta property="og:title" content="AI Navigation Engine: Intelligent Website Navigation - Carl Wahlen" />
+        <meta property="og:description" content="Prototype for intent-based navigation enabling users to search naturally, without knowing the website's structure or terminology." />
+        <meta property="og:image" content="https://carlwahlen.com/og-image-ai-navigation.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:site_name" content="Carl Wahlen" />
+
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://carlwahlen.com/case/ai-navigation" />
+        <meta property="twitter:title" content="AI Navigation Engine: Intelligent Website Navigation - Carl Wahlen" />
+        <meta property="twitter:description" content="Prototype for intent-based navigation enabling users to search naturally, without knowing the website's structure or terminology." />
+        <meta property="twitter:image" content="https://carlwahlen.com/og-image-ai-navigation.jpg" />
+
+        {/* Additional SEO */}
+        <meta name="keywords" content="AI navigation, intelligent website navigation, LLM navigation, user guidance system, tax authority navigation, bank website navigation, municipality navigation, AI assistant, intent detection, step-by-step guidance" />
+        <link rel="canonical" href="https://carlwahlen.com/case/ai-navigation" />
+      </Helmet>
+      
+      <div className="min-h-screen bg-white">
+        {/* 1) HERO */}
+        <section className="pt-4 pb-4 lg:pt-8 lg:pb-16">
+          <div className="container-custom">
+            <div className="max-w-[680px] mx-auto text-center">
+              <h1 className="text-4xl md:text-5xl text-gray-900 mb-8 font-medium">
+                  AI Navigation Engine
+                </h1>
+              <p className="text-xl text-gray-600 leading-relaxed mb-8 font-normal">
+                Prototype for intent-based navigation enabling users to search naturally, without knowing the website's structure or terminology.
+                </p>
+                
+              {/* CTA Buttons */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link 
+                    to="/contact" 
+                  className="btn-primary inline-flex items-center justify-center"
+                  >
+                  Contact me
+                </Link>
+                <Link 
+                  to="/case" 
+                  className="btn-secondary inline-flex items-center justify-center"
+                >
+                  View other cases
+                  </Link>
+                </div>
+              </div>
+
+            {/* Large mockup centered */}
+            <div className="flex justify-center mt-16 lg:mt-20">
+                <img
+                  src="/Ai-navigation-bot.png"
+                  alt="AI Navigation Engine interface"
+                className="w-full max-w-[40%]"
+                  loading="lazy"
+                />
+            </div>
+          </div>
+        </section>
+
+        {/* Breadcrumbs */}
+        <Breadcrumbs />
+
+        {/* Divider */}
+        <div className="border-t border-gray-200"></div>
+
+        {/* 2) WHY AI NAVIGATION MATTERS */}
+        <section className="py-24 lg:py-32">
+          <div className="container-custom" style={{ maxWidth: '1180px' }}>
+            <div className="max-w-[680px] mx-auto">
+              <h2 className="text-3xl text-gray-900 mb-6 text-LEFT font-medium">
+                Why AI Navigation Matters
+              </h2>
+              
+              <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left font-normal">
+                Many complex websites are well-designed and fully accessible, yet users still struggle to find what they need because they search using everyday language that does not match the site's internal terminology. This mismatch between user intent and organizational structure creates a persistent navigation barrier.
+              </p>
+              
+              {/* Icon list in two columns - 5-7 bullets */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 text-gray-900 mr-4 mt-0.5">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 font-normal">Traditional menus require knowing structure to find info</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 text-gray-900 mr-4 mt-0.5">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 font-normal">Search rarely understands natural phrasing</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 text-gray-900 mr-4 mt-0.5">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 font-normal">Users get stuck in complex information systems</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 text-gray-900 mr-4 mt-0.5">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 font-normal">AI navigation removes friction and lowers cognitive load</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 text-gray-900 mr-4 mt-0.5">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 font-normal">Users expect conversational interfaces, not menu hierarchies</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 text-gray-900 mr-4 mt-0.5">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 font-normal">Task completion rates drop when terminology mismatch occurs</p>
+                </div>
+                
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-6 h-6 text-gray-900 mr-4 mt-0.5">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <p className="text-lg text-gray-700 font-normal">Intent-based systems improve user satisfaction significantly</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="border-t border-gray-200"></div>
+
+    
+
+        {/* Divider */}
+        <div className="border-t border-gray-200"></div>
+
+        {/* 4) CONCEPT + CORE SOLUTION */}
+        <section className="py-24 lg:py-32 bg-gray-50">
+          <div className="container-custom" style={{ maxWidth: '1180px' }}>
+            <div className="mb-16">
+              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+                Concept: My Approach
+              </h2>
+              <div className="max-w-[680px]">
+                <p className="text-lg text-gray-600 leading-relaxed mb-8 font-normal">
+                Our AI model delivers outcomes instead of tools, automating complex workflows autonomously rather than requiring teams to operate software. With value-based pricing and continuous AI improvement, you get a self-running service that performs work, scales instantly and generates results without human effort.
+                </p>
+              </div>
+             
+            </div>
+
+            {/* UI Screenshots with alternating layout */}
+            <div className="space-y-20">
+              {/* Intent Detection - Text left, Screenshot right */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="max-w-[680px]">
+                  <h3 className="text-2xl text-gray-900 mb-4 font-medium">
+                    Intent Detection
+                  </h3>
+                  <p className="text-gray-700 mb-4 font-normal">
+                    The AI Navigation Engine uses natural language processing to understand user goals from natural language, interpreting meaning rather than exact keywords or terminology. It provides confidence scoring for search result relevance and handles conversational queries and follow-up questions.
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="/Ai_nav_prototyp.svg"
+                    alt="Intent detection interface"
+                    className="w-full max-w-sm mx-auto"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              {/* Flow-Based Guidance - Screenshot left, Text right */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="lg:order-1">
+                  <img
+                    src="/Ai_nav_pic2.png"
+                    alt="Flow-based guidance interface"
+                    className="w-full"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="lg:order-2 max-w-[680px]">
+                  <h3 className="text-2xl text-gray-900 mb-4 font-medium">
+                    Flow-Based Guidance
+                  </h3>
+                  <p className="text-gray-700 mb-4 font-normal">
+                    The system provides dynamic step-by-step navigation tailored to user needs, with conditional visibility based on user context. It enables seamless transitions between authentication and destination, supporting multi-step flows with branching logic.
+                  </p>
+                </div>
+              </div>
+
+              {/* Context Awareness - Text left, Screenshot right */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div className="max-w-[680px]">
+                  <h3 className="text-2xl text-gray-900 mb-4 font-medium">
+                    Context Awareness
+                  </h3>
+                  <p className="text-gray-700 mb-4 font-normal">
+                    The navigation system maintains session tracking and state management across flows, with device and language adaptation. It provides personalized suggestions based on user behavior and maintains context through authentication steps.
+                  </p>
+                </div>
+                  <div>
+                    <img
+                    src="/Ai_nav_pic3.png"
+                    alt="Context awareness interface"
+                    className="w-full"
+                      loading="lazy"
+                    />
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="border-t border-gray-200"></div>
+
+        {/* 5) CAPABILITIES / WHAT THIS ENABLES */}
+        <section className="py-24 lg:py-32">
+          <div className="container-custom">
+            <div className="max-w-[680px] mx-auto mb-16 text-center">
+              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+                What This Solution Enables
+              </h2>
+                  </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" style={{ gap: '24px' }}>
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-3">Reduced navigation friction</h3>
+                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                  <li>• Faster information discovery</li>
+                  <li>• No need to learn site structure</li>
+                  <li>• Lower cognitive load</li>
+                </ul>
+                </div>
+
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-3">Improved task completion</h3>
+                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                  <li>• Higher success rates</li>
+                  <li>• Intent correctly interpreted</li>
+                  <li>• Guided step-by-step flows</li>
+                </ul>
+                  </div>
+              
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-3">Scalable architecture</h3>
+                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                  <li>• Self-hosted system</li>
+                  <li>• API integrations</li>
+                  <li>• Extensible content types</li>
+                </ul>
+                </div>
+
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-3">Consistent UX</h3>
+                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                  <li>• Unified navigation experience</li>
+                  <li>• Works across platforms</li>
+                  <li>• Accessible design patterns</li>
+                </ul>
+              </div>
+            </div>
+                  </div>
+        </section>
+
+        {/* Divider */}
+        <div className="border-t border-gray-200"></div>
+
+        {/* 6) PROCESS - HOW I APPROACHED */}
+        <section className="py-24 lg:py-32">
+          <div className="container-custom" style={{ maxWidth: '1180px' }}>
+            <div className="max-w-[680px] mx-auto mb-16 text-center">
+              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+                How I Approached the Problem
+              </h2>
+                  </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ gap: '24px' }}>
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 105.65 5.65a7.5 7.5 0 0010.99 10.99z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-3">Research</h3>
+                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                  <li>• User behavior analysis on complex websites</li>
+                  <li>• Intent detection patterns and challenges</li>
+                </ul>
+                </div>
+
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.757.426 1.757 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.757-2.924 1.757-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.757-.426-1.757-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.607 2.296.07 2.572-1.065z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                  </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-3">Architecture</h3>
+                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                  <li>• System design for intent-based navigation</li>
+                  <li>• LLM integration and content indexing</li>
+                </ul>
+                  </div>
+
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                  </svg>
+                </div>
+                <h3 className="text-lg font-medium text-gray-900 mb-3">Prototyping</h3>
+                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                  <li>• Prototype development and user testing</li>
+                  <li>• Iterative flow refinement based on feedback</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="border-t border-gray-200"></div>
+
+        {/* 7) INSIGHTS / MARKET DATA */}
+        <section className="py-24 lg:py-32">
+          <div className="container-custom">
+            <div className="max-w-[680px] mx-auto">
+              <h2 className="text-3xl text-gray-900 mb-6 text-left font-medium">
+                User Insights
+              </h2>
+              <p className="text-lg text-gray-600 mb-10 text-left font-normal">
+                Research findings on user behavior and navigation patterns on complex websites
+              </p>
+              
+              {/* Scannable bullets */}
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <p className="text-lg text-gray-700 font-normal">Users search based on goals, not menu labels</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <p className="text-lg text-gray-700 font-normal">Users type natural language, not internal terms</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <p className="text-lg text-gray-700 font-normal">Users expect results to understand intent</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <p className="text-lg text-gray-700 font-normal">Users refine queries like chat, not filter trees</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <p className="text-lg text-gray-700 font-normal">Users respond to suggestions faster than dropdowns</p>
+                </li>
+                <li className="flex items-start">
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                  <p className="text-lg text-gray-700 font-normal">Success rate increases when intent is interpreted</p>
+                </li>
+              </ul>
+              
+              {/* Optional toggle */}
+              <details className="mt-12 pt-8 border-t border-gray-200">
+                <summary 
+                  className="cursor-pointer text-base text-gray-900 font-medium hover:text-gray-700 transition-colors"
+                  onClick={() => setResearchExpanded(!researchExpanded)}
+                >
+                  View detailed research notes
+                  <svg 
+                    className={`inline-block ml-2 w-5 h-5 transform transition-transform ${researchExpanded ? 'rotate-180' : ''}`}
+                    fill="none" 
+                    stroke="currentColor" 
+                    viewBox="0 0 24 24"
+                  >
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </summary>
+                <div className="mt-6 space-y-4 text-gray-600 font-normal">
+                  <p>
+                    Research was conducted through user interviews, analytics analysis, and usability testing on complex government and financial websites. The findings reveal consistent patterns in how users approach information architecture challenges.
+                  </p>
+                  <p>
+                    Key insights include the disconnect between user mental models and organizational structures, the preference for conversational interfaces over hierarchical navigation, and the significant improvement in task completion rates when intent-based systems are implemented.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="border-t border-gray-200"></div>
+
+        {/* 10) FINAL CTA */}
+        <section className="py-32 lg:py-40">
+          <div className="container-custom">
+            <div className="max-w-[680px] mx-auto text-center">
+              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+                Interested in learning more?
+              </h2>
+              <p className="text-lg text-gray-600 mb-10 leading-relaxed font-normal">
+                Let's discuss how I can help build scalable, user-centric solutions.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="btn-primary text-lg px-8 py-4"
+              >
+                Contact me
+              </Link>
+              <Link 
+                to="/case" 
+                className="btn-secondary text-lg px-8 py-4"
+              >
+                View other cases
+              </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      
+      {/* Case-specific feedback prompt */}
+      <CaseFeedbackPrompt caseId="ai-navigation" />
+    </>
+  );
+};
+
+export default AINavigationCasePage;

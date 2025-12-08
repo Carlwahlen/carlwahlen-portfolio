@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  
+  body {
+    @apply bg-white text-gray-900 font-sans antialiased;
+    font-feature-settings: 'rlig' 1, 'calt' 1;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+  
+  /* Core Web Vitals optimizations */
+  img {
+    loading: lazy;
+    decoding: async;
+  }
+  
+  /* Prevent layout shift during image loading */
+  img[width][height] {
+    aspect-ratio: attr(width) / attr(height);
+  }
+  
+  /* Critical CSS for above-the-fold content */
+  .hero-section {
+    contain: layout style paint;
+  }
+  
+  /* Optimize animations for better performance */
+  .animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
+  }
+  
+  * {
+    @apply border-gray-200;
+  }
+  
+  /* Typography improvements */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-medium tracking-tight;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-6xl;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  
+  /* Link styles */
+  a {
+    @apply underline-offset-4 decoration-1 transition-all duration-200;
+  }
+  
+  a:hover {
+    @apply underline;
+  }
+  
+      /* Focus styles for accessibility */
+      *:focus-visible {
+        @apply outline-none ring-2 ring-gray-900 ring-offset-2;
+      }
+      
+      /* Form elements */
+      input, textarea, select {
+        @apply focus:ring-2 focus:ring-gray-900 focus:border-gray-900;
+      }
+}
+
+@layer components {
+  /* Glass effect for header */
+  .glass {
+    @apply backdrop-blur-md bg-white/90 border-b border-gray-200/50;
+  }
+  
+  /* Card component */
+  .card {
+    @apply rounded-2xl bg-white shadow-soft transition-all duration-200;
+  }
+  
+  /* Button variants */
+  .btn-primary {
+    @apply bg-dark-green text-white font-semibold px-8 py-3 rounded-full hover:bg-dark-green-700 transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full hover:bg-gray-50 hover:border-gray-400 transition-all duration-200;
+  }
+  
+  .btn-primary-hover {
+    @apply border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full bg-white transition-all duration-200 hover:bg-dark-green hover:text-white hover:border-dark-green;
+  }
+  
+  .btn-primary-hover-group {
+    @apply border border-gray-300 text-gray-700 font-semibold px-8 py-3 rounded-full bg-white transition-all duration-200 group-hover:bg-dark-green group-hover:text-white group-hover:border-dark-green;
+  }
+  
+      .btn-accent {
+        @apply bg-gray-900 text-white font-medium px-6 py-3 rounded-2xl hover:bg-gray-800 transition-all duration-200 shadow-sm hover:shadow-md hover:scale-[1.01];
+      }
+      
+      .btn-link {
+        @apply text-gray-900 hover:text-gray-700 font-medium underline-offset-4 hover:underline transition-colors duration-200;
+      }
+  
+      /* Text gradient */
+      .text-gradient {
+        @apply bg-gradient-to-r from-gray-900 to-gray-700 bg-clip-text text-transparent;
+      }
+      
+      /* Background gradients */
+      .hero-gradient {
+        background: #f8f8f8;
+      }
+      
+      .card-gradient {
+        background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+      }
+      
+      .accent-gradient {
+        background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+      }
+      
+      .animated-gradient {
+        background: linear-gradient(-45deg, #f8fafc, #e2e8f0, #f1f5f9, #e2e8f0);
+        background-size: 400% 400%;
+        animation: gradient 8s ease infinite;
+      }
+  
+  /* Hover effects */
+  .hover-lift {
+    @apply hover:-translate-y-1 hover:shadow-elevation transition-all duration-200;
+  }
+  
+  /* Section backgrounds */
+  .section-light {
+    @apply bg-gray-50;
+  }
+  
+  .section-white {
+    @apply bg-white;
+  }
+  
+  /* Form components */
+      .form-input {
+        @apply w-full px-4 py-3 bg-white border border-gray-300 rounded-xl text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-gray-900 transition-all duration-200;
+      }
+  
+  .form-label {
+    @apply block text-sm font-medium text-gray-700 mb-2;
+  }
+  
+  .form-error {
+    @apply text-sm text-red-600 mt-1;
+  }
+  
+  /* Navigation */
+  .nav-link {
+    @apply text-gray-600 hover:text-gray-900 font-medium transition-colors duration-200;
+  }
+  
+      .nav-link-active {
+        @apply text-gray-900 font-semibold;
+      }
+}
+
+@layer utilities {
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-hero {
+    @apply max-w-none mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1440px;
+  }
+  
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  
+  .section-padding-sm {
+    @apply py-12 sm:py-16 lg:py-20;
+  }
+  
+  /* Text utilities */
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  /* Animation utilities */
+  /* Note: animate-fade-in and animate-slide-up are already defined in tailwind.config.js */
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+  }
+  
+  .animate-gradient {
+    background-size: 200% 200%;
+    animation: gradient 8s ease infinite;
+  }
+  
+  /* Safe area for mobile devices (iPhone notch/home indicator) */
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    .safe-area-bottom {
+      padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+    }
+  }
+  
+  @supports (padding-top: env(safe-area-inset-top)) {
+    .safe-area-top {
+      padding-top: env(safe-area-inset-top);
+    }
+  }
+}

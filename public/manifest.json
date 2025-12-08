@@ -1,0 +1,29 @@
+{
+  "name": "Carl Wahlen - Product Strategy Consultant",
+  "short_name": "Carl Wahlen",
+  "description": "Product strategy consultant in Sweden specializing in data-driven products, UX/UI design, business development, and technology strategy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#10b981",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "professional"],
+  "lang": "en",
+  "dir": "ltr",
+  "scope": "/",
+  "id": "carl-wahlen-consultant"
+}

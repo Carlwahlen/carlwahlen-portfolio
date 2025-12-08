@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hellman & Partners Geo Insight Map</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #F5F7FA;
+            color: #0B1220;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .header {
+            margin-bottom: 60px;
+        }
+
+        .header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: #0B1220;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .header p {
+            font-size: 1.3rem;
+            color: #6B7280;
+            font-weight: 400;
+            margin-bottom: 8px;
+        }
+
+        .disclaimer {
+            font-size: 0.9rem;
+            color: #9CA3AF;
+            font-style: italic;
+        }
+
+        .map-container {
+            background: #FFFFFF;
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(15, 23, 42, 0.06);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .map-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+        }
+
+        #map-canvas {
+            border-radius: 16px;
+            overflow: hidden;
+            background: #F5F7FA;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 32px;
+            margin-top: 32px;
+            box-shadow: 0 8px 28px rgba(15, 23, 42, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .info-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0B1220;
+            margin-bottom: 12px;
+        }
+
+        .info-description {
+            font-size: 1.1rem;
+            color: #6B7280;
+            line-height: 1.7;
+        }
+
+        .tooltip {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            z-index: 1000;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            pointer-events: none;
+            max-width: 280px;
+        }
+
+        .tooltip.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .tooltip-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0B1220;
+            margin-bottom: 12px;
+        }
+
+        .tooltip-metrics {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .tooltip-metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.95rem;
+        }
+
+        .tooltip-metric-label {
+            color: #6B7280;
+        }
+
+        .tooltip-metric-value {
+            color: #0B1220;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1200px) {
+            .container {
+                padding: 40px 24px;
+            }
+            
+            .header h1 {
+                font-size: 2.8rem;
+            }
+            
+            .map-container {
+                padding: 32px 24px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.2rem;
+            }
+            
+            .header p {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                transition: none !important;
+                animation: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Hellman & Partners Market Intelligence</h1>
+            <p>Geografisk översikt – Alla data är illustrativa</p>
+            <div class="disclaimer">Alla data är illustrativa</div>
+        </div>
+
+        <div class="map-container">
+            <div id="map-canvas"></div>
+        </div>
+
+        <div class="info-card">
+            <div class="info-title">Marknadsläge (illustrativt)</div>
+            <div class="info-description">
+                Storstäder visar blandade signaler. Illustrativ förändring: +0,4 % / 12 månader.
+            </div>
+        </div>
+    </div>
+
+    <div class="tooltip" id="tooltip">
+        <div class="tooltip-title" id="tooltip-title">Stockholm</div>
+        <div class="tooltip-metrics" id="tooltip-metrics">
+            <div class="tooltip-metric">
+                <span class="tooltip-metric-label">Omsättning</span>
+                <span class="tooltip-metric-value">+12%</span>
+            </div>
+            <div class="tooltip-metric">
+                <span class="tooltip-metric-label">Utbud</span>
+                <span class="tooltip-metric-value">-8%</span>
+            </div>
+            <div class="tooltip-metric">
+                <span class="tooltip-metric-label">Riskindex</span>
+                <span class="tooltip-metric-value">Låg</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="geo-sketch.js"></script>
+</body>
+</html>

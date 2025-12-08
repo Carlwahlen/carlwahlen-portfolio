@@ -1,0 +1,85 @@
+{
+  "testCases": [
+    {
+      "id": "tc-001",
+      "input": "show me your case studies",
+      "expectedIntent": "find_information",
+      "expectedTargetUrl": "/#/case",
+      "expectedFlow": "flow-view-cases",
+      "tags": ["case", "portfolio", "work"]
+    },
+    {
+      "id": "tc-002",
+      "input": "I want to contact you",
+      "expectedIntent": "contact_support",
+      "expectedTargetUrl": "/#/contact",
+      "expectedFlow": "flow-contact",
+      "tags": ["contact", "email", "hire"]
+    },
+    {
+      "id": "tc-003",
+      "input": "what services do you offer",
+      "expectedIntent": "find_information",
+      "expectedTargetUrl": "/#/services",
+      "expectedFlow": "flow-services",
+      "tags": ["services", "offer", "capabilities"]
+    },
+    {
+      "id": "tc-004",
+      "input": "tell me about the founder project",
+      "expectedIntent": "find_information",
+      "expectedTargetUrl": "/#/case/founder",
+      "expectedFlow": "flow-case-founder",
+      "tags": ["founder", "fintech", "case"]
+    },
+    {
+      "id": "tc-005",
+      "input": "show me your work",
+      "expectedIntent": "find_information",
+      "expectedTargetUrl": "/#/case",
+      "expectedFlow": "flow-view-cases",
+      "tags": ["work", "portfolio", "projects"]
+    },
+    {
+      "id": "tc-006",
+      "input": "what is your email address",
+      "expectedIntent": "contact_support",
+      "expectedTargetUrl": "/#/contact",
+      "expectedFlow": "flow-contact",
+      "tags": ["email", "contact", "reach"]
+    },
+    {
+      "id": "tc-007",
+      "input": "what can you help our company achieve",
+      "expectedIntent": "find_information",
+      "expectedTargetUrl": "/#/services",
+      "expectedFlow": "flow-services",
+      "tags": ["services", "help", "company"]
+    },
+    {
+      "id": "tc-008",
+      "input": "who have you worked with",
+      "expectedIntent": "find_information",
+      "expectedTargetUrl": "/#/about",
+      "expectedFlow": "flow-about",
+      "tags": ["about", "experience", "clients"]
+    },
+    {
+      "id": "tc-009",
+      "input": "hellman partners case",
+      "expectedIntent": "find_information",
+      "expectedTargetUrl": "/#/case/hellman-partners",
+      "expectedFlow": "flow-case-hellman-partners",
+      "tags": ["hellman", "proptech", "case"]
+    },
+    {
+      "id": "tc-010",
+      "input": "what is your core expertise",
+      "expectedIntent": "find_information",
+      "expectedTargetUrl": "/#/services",
+      "expectedFlow": "flow-services",
+      "tags": ["expertise", "skills", "services"]
+    }
+  ]
+}
+
