@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Search from './Search';
-import LanguageSelector from './LanguageSelector';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -88,11 +87,6 @@ const Header: React.FC = () => {
                 <Search placeholder="Search pages..." />
               </div>
               
-              {/* Language Selector */}
-              <div className="hidden md:block">
-                <LanguageSelector />
-              </div>
-              
               <Link
                 to="/kontakt"
                 className="btn-primary text-sm"
@@ -157,11 +151,6 @@ const Header: React.FC = () => {
                 {/* Mobile Search */}
                 <div className="pt-2">
                   <Search placeholder="Search pages..." />
-                </div>
-                
-                {/* Mobile Language Selector */}
-                <div className="pt-2">
-                  <LanguageSelector />
                 </div>
                 
                 <Link
