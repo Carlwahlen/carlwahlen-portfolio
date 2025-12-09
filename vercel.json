@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd $VERCEL_BUILD_DIR && vite build",
+  "buildCommand": "vite build",
   "outputDirectory": "dist",
   "installCommand": "pnpm install",
   "framework": "vite"
