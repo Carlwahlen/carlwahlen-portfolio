@@ -10,7 +10,7 @@ declare global {
 }
 
 // Use the same GA ID as in index.html
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-D7352SEG96';
+const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-7LZ1KF8WBT';
 let gaScriptInjected = false;
 
 const loadGoogleAnalytics = () => {
