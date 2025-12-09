@@ -433,6 +433,36 @@ const Services: React.FC = () => {
           </div>
         </section>
 
+        {/* Knowledge Hub Link */}
+        <section className="section-padding bg-white">
+          <div className="container-custom">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl text-gray-900 mb-4">
+                Learn more in my Knowledge Hub
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                Explore guides and insights on product strategy, UX design, data-driven development, and more.
+              </p>
+              <Link to="/knowledge" className="btn-secondary text-base px-6 py-3 inline-flex items-center">
+                Browse Knowledge Hub
+                <svg 
+                  className="w-5 h-5 ml-2" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M13 7l5 5m0 0l-5 5m5-5H6" 
+                  />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="section-padding bg-gray-50">
           <div className="container-custom">

@@ -9,6 +9,7 @@
  */
 
 import { cases } from '../src/data/cases.js';
+import { getAllKnowledgePages } from '../src/content/knowledgePages.js';
 import { writeFileSync } from 'fs';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
@@ -28,6 +29,7 @@ const staticPages = [
   { path: '/faq', priority: '0.7', changefreq: 'monthly' },
   { path: '/services', priority: '0.8', changefreq: 'monthly' },
   { path: '/case', priority: '0.8', changefreq: 'monthly' },
+  { path: '/knowledge', priority: '0.8', changefreq: 'weekly' },
 ];
 
 // Generate case page URLs from cases array
@@ -37,8 +39,15 @@ const casePages = cases.map(caseItem => ({
   changefreq: 'monthly' as const,
 }));
 
+// Generate knowledge page URLs
+const knowledgePages = getAllKnowledgePages().map(page => ({
+  path: `/knowledge/${page.areaSlug}/${page.pageSlug}`,
+  priority: '0.8',
+  changefreq: 'monthly' as const,
+}));
+
 // Combine all pages
-const allPages = [...staticPages, ...casePages];
+const allPages = [...staticPages, ...casePages, ...knowledgePages];
 
 // Generate XML sitemap
 function generateSitemap(): string {

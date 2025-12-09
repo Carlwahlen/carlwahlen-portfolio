@@ -495,7 +495,7 @@ const HellmanPartnersVisualization: React.FC<HellmanPartnersVisualizationProps> 
               console.log(`Selected: ${property.name} - Pris: ${(property.price / 1000000).toFixed(1)}M kr - Trygghet: ${property.safetyIndex} - Område: ${property.area}`);
               
               // Navigera till case-sidan när man klickar på en fastighet
-              window.location.href = '/#/case';
+              window.location.href = '/case';
             }
           });
         };

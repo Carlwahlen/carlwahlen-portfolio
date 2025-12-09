@@ -42,6 +42,9 @@ const Breadcrumbs: React.FC = () => {
         case 'faq':
           displayName = 'FAQ';
           break;
+        case 'knowledge':
+          displayName = 'Knowledge Hub';
+          break;
         case 'hellman-partners':
           displayName = 'Hellman & Partners';
           break;
@@ -52,11 +55,20 @@ const Breadcrumbs: React.FC = () => {
           displayName = 'Payment Orchestration';
           break;
         default:
-          // Capitalize first letter and replace hyphens with spaces
-          displayName = segment
-            .split('-')
-            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-            .join(' ');
+          // For knowledge article slugs, format nicely
+          if (pathSegments[index - 1] === 'knowledge') {
+            // This is an area slug or page slug
+            displayName = segment
+              .split('-')
+              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ');
+          } else {
+            // Capitalize first letter and replace hyphens with spaces
+            displayName = segment
+              .split('-')
+              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+              .join(' ');
+          }
       }
 
       breadcrumbs.push({

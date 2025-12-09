@@ -83,9 +83,9 @@ export const AINavigationWidget: React.FC = () => {
       
       // Navigate immediately if targetUrl is provided
       if (data.targetUrl) {
-        // Handle hash-based routing (/#/case) or regular paths
+        // Handle routing (support both old /#/ paths and new / paths)
         const url = data.targetUrl.startsWith('/#') 
-          ? data.targetUrl.substring(2) // Remove /# prefix for React Router
+          ? data.targetUrl.substring(2) // Remove /# prefix for React Router compatibility
           : data.targetUrl.startsWith('/')
           ? data.targetUrl
           : `/${data.targetUrl}`;

@@ -1,11 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { fileURLToPath, URL } from 'node:url'
-import { resolve } from 'path'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  root: '.',
   plugins: [react()],
   // For development: use root path
   // For production: use GitHub Pages subdirectory until carlwahlen.com is ready
@@ -18,9 +15,6 @@ export default defineConfig({
     ],
   },
   build: {
-    outDir: 'dist',
-    rollupOptions: {
-      input: resolve(process.cwd(), 'index.html')
-    }
+    outDir: 'dist'
   }
 })

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -17,6 +17,8 @@ import About from './pages/About';
 import Contact from './pages/Contact';
 import FAQ from './pages/FAQ';
 import Notes from './pages/Notes';
+import KnowledgeArticlePage from './pages/KnowledgeArticlePage';
+import KnowledgeOverviewPage from './pages/KnowledgeOverviewPage';
 import { generateJSONLD } from './seo';
 import { initializeTracking, analyticsEvents } from './utils/analytics';
 
@@ -26,7 +28,7 @@ const PageViewTracker: React.FC = () => {
 
   useEffect(() => {
     // Track page view on route change
-    const pagePath = location.pathname + location.hash;
+    const pagePath = location.pathname;
     analyticsEvents.pageView(pagePath);
     
     // Re-initialize tracking for new page (scroll heatmap resets per page)
@@ -45,10 +47,10 @@ const ScrollManager: React.FC = () => {
 
   useEffect(() => {
     const prevLocation = prevLocationRef.current;
-    const prevKey = prevLocation.key || `${prevLocation.pathname}${prevLocation.hash}`;
+    const prevKey = prevLocation.key || prevLocation.pathname;
     positionsRef.current[prevKey] = window.scrollY;
 
-    const currentKey = location.key || `${location.pathname}${location.hash}`;
+    const currentKey = location.key || location.pathname;
     const storedPosition = positionsRef.current[currentKey];
 
     if (storedPosition !== undefined) {
@@ -97,6 +99,9 @@ const App: React.FC = () => {
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/faq" element={<FAQ />} />
+            {/* Knowledge Hub routes */}
+            <Route path="/knowledge" element={<KnowledgeOverviewPage />} />
+            <Route path="/knowledge/:areaSlug/:pageSlug" element={<KnowledgeArticlePage />} />
             {/* Redirect old Swedish URLs to English */}
             <Route path="/om" element={<About />} />
             <Route path="/kontakt" element={<Contact />} />
