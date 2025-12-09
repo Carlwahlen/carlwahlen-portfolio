@@ -9,7 +9,8 @@ declare global {
   }
 }
 
-const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID;
+// Use the same GA ID as in index.html
+const GA_MEASUREMENT_ID = import.meta.env.VITE_GA_MEASUREMENT_ID || 'G-D7352SEG96';
 let gaScriptInjected = false;
 
 const loadGoogleAnalytics = () => {
@@ -17,10 +18,16 @@ const loadGoogleAnalytics = () => {
     return;
   }
 
-  if (!GA_MEASUREMENT_ID) {
-    if (import.meta.env.DEV) {
-      console.warn('Missing VITE_GA_MEASUREMENT_ID – Google Analytics will not load.');
-    }
+  // Check if Google tag is already loaded from index.html
+  if (document.querySelector(`script[src*="gtag/js?id=${GA_MEASUREMENT_ID}"]`)) {
+    gaScriptInjected = true;
+    // Ensure gtag is available
+    window.dataLayer = window.dataLayer || [];
+    window.gtag =
+      window.gtag ||
+      function gtag() {
+        window.dataLayer?.push(arguments);
+      };
     return;
   }
 
