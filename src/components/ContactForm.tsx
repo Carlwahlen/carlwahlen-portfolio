@@ -33,6 +33,20 @@ const ContactForm: React.FC = () => {
   // Track form start when component mounts
   useEffect(() => {
     analyticsEvents.contactFormStart();
+    
+    // Debug: Log EmailJS configuration (only in development or if explicitly enabled)
+    if (import.meta.env.DEV || window.location.search.includes('debug=true')) {
+      const serviceId = (import.meta.env as any).VITE_EMAILJS_SERVICE_ID;
+      const templateId = (import.meta.env as any).VITE_EMAILJS_TEMPLATE_ID;
+      const publicKey = (import.meta.env as any).VITE_EMAILJS_PUBLIC_KEY;
+      
+      console.log('EmailJS Configuration Check:', {
+        serviceId: serviceId ? `${serviceId.substring(0, 10)}...` : 'MISSING',
+        templateId: templateId ? `${templateId.substring(0, 10)}...` : 'MISSING',
+        publicKey: publicKey ? `${publicKey.substring(0, 10)}...` : 'MISSING',
+        allSet: !!(serviceId && templateId && publicKey)
+      });
+    }
   }, []);
 
   const interestOptions = [
