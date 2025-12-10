@@ -125,13 +125,27 @@ const ContactForm: React.FC = () => {
         to_name: 'Carl Wahlen',
       };
 
+      // Log what we're sending (only in dev/debug mode)
+      if (import.meta.env.DEV || window.location.search.includes('debug=true')) {
+        console.log('Sending EmailJS request:', {
+          serviceId,
+          templateId,
+          publicKey: publicKey ? `${publicKey.substring(0, 5)}...` : 'MISSING',
+          templateParams: Object.keys(templateParams)
+        });
+      }
+
       // Send email via EmailJS
-      await emailjs.send(
+      const response = await emailjs.send(
         serviceId,
         templateId,
         templateParams,
         publicKey
       );
+      
+      if (import.meta.env.DEV || window.location.search.includes('debug=true')) {
+        console.log('EmailJS response:', response);
+      }
       
       // Track successful form submission
       analyticsEvents.contactFormSubmit();
