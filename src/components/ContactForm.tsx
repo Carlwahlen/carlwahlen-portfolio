@@ -82,12 +82,12 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
     setError(null);
     
-    try {
-      // EmailJS configuration - Get from environment variables
-      const serviceId = (import.meta.env as any).VITE_EMAILJS_SERVICE_ID;
-      const templateId = (import.meta.env as any).VITE_EMAILJS_TEMPLATE_ID;
-      const publicKey = (import.meta.env as any).VITE_EMAILJS_PUBLIC_KEY;
+    // EmailJS configuration - Get from environment variables
+    const serviceId = (import.meta.env as any).VITE_EMAILJS_SERVICE_ID;
+    const templateId = (import.meta.env as any).VITE_EMAILJS_TEMPLATE_ID;
+    const publicKey = (import.meta.env as any).VITE_EMAILJS_PUBLIC_KEY;
 
+    try {
       // Check if EmailJS is configured
       if (!serviceId || !templateId || !publicKey) {
         throw new Error('EmailJS is not configured. Please set up environment variables.');
@@ -131,11 +131,30 @@ const ContactForm: React.FC = () => {
       const errorMessage = error instanceof Error ? error.message : 'submission_failed';
       analyticsEvents.contactFormError(errorMessage);
       
-      setError(
-        errorMessage.includes('EmailJS is not configured')
-          ? 'Form is not configured yet. Please contact the site administrator.'
-          : 'Failed to send message. Please try again or contact me directly via email.'
-      );
+      // More detailed error handling
+      let userFriendlyError = 'Failed to send message. Please try again or contact me directly via email.';
+      
+      if (errorMessage.includes('EmailJS is not configured')) {
+        userFriendlyError = 'Form is not configured yet. Please contact the site administrator.';
+      } else if (errorMessage.includes('400')) {
+        userFriendlyError = 'Invalid form data. Please check all fields and try again.';
+      } else if (errorMessage.includes('403') || errorMessage.includes('Forbidden')) {
+        userFriendlyError = 'Email service authentication failed. Please contact the site administrator.';
+      } else if (errorMessage.includes('Public Key') || errorMessage.includes('API key')) {
+        userFriendlyError = 'Email service configuration error. Please contact the site administrator.';
+      }
+      
+      // Log detailed error for debugging
+      if (error instanceof Error) {
+        console.error('EmailJS Error Details:', {
+          message: error.message,
+          serviceId: serviceId ? 'Set' : 'Missing',
+          templateId: templateId ? 'Set' : 'Missing',
+          publicKey: publicKey ? 'Set' : 'Missing',
+        });
+      }
+      
+      setError(userFriendlyError);
       setIsSubmitting(false);
     }
   };
