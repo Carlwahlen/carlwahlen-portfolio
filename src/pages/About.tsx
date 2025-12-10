@@ -112,7 +112,7 @@ const About: React.FC = () => {
           />
           
           {/* About Heading - Absolutely positioned, centered on screen */}
-          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[calc(50%+235px)] md:-translate-y-[calc(50%+183px)] text-[48px] text-gray-900 font-medium text-center z-30">
+          <h1 className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-[calc(50%+155px)] md:-translate-y-[calc(50%+183px)] text-[42px] md:text-[48px] text-gray-900 font-medium text-center whitespace-nowrap z-30">
             About me
           </h1>
           
