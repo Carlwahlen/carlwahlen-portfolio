@@ -107,6 +107,9 @@ const Home: React.FC = () => {
             </h1>
             
             <div className="flex flex-wrap justify-center gap-3 mb-10">
+              <Link to="/about" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
+                About me
+              </Link>
               <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
                 Product Strategy
               </Link>
@@ -115,9 +118,6 @@ const Home: React.FC = () => {
               </Link>
               <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
                 UX/UI Design
-              </Link>
-              <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
-                Technical Architecture
               </Link>
             </div>
             
