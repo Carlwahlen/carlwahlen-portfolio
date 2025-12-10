@@ -47,6 +47,14 @@ const ScrollManager: React.FC = () => {
 
   useEffect(() => {
     const prevLocation = prevLocationRef.current;
+    const isSamePath = location.pathname === prevLocation.pathname;
+
+    // If only the query/search changes (e.g., case category filters), don't force scroll to top.
+    if (isSamePath && location.search !== prevLocation.search) {
+      prevLocationRef.current = location;
+      return;
+    }
+
     const prevKey = prevLocation.key || prevLocation.pathname;
     positionsRef.current[prevKey] = window.scrollY;
 
