@@ -74,7 +74,7 @@ const AINavigationCasePage: React.FC = () => {
                 <img
                   src="/Ai-navigation-bot.png"
                   alt="AI Navigation Engine interface"
-                className="w-full max-w-[40%] lg:max-w-[900px]"
+                className="w-full max-w-[20%] lg:max-w-[450px]"
                   loading="lazy"
                 />
             </div>
