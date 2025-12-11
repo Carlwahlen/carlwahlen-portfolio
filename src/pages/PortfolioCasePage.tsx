@@ -43,7 +43,7 @@ const PortfolioCasePage: React.FC = () => {
             {/* Large mockup centered */}
             <div className="flex justify-center mt-16 lg:mt-20">
                 <img
-                  src="/Payment_app_flow.png"
+                  src="/Portfolio_website_mockup2.png"
                 alt="Portfolio website mockup"
                 className="w-full max-w-[80%]"
                   loading="lazy"

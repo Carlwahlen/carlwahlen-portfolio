@@ -76,7 +76,7 @@ export const cases: Case[] = [
     impact: 'Professional online presence demonstrating full-stack capabilities',
     category: 'Web Development',
     tags: ['React', 'TypeScript', 'Web Development', 'Portfolio'],
-    image: '/Payment_app_flow.png'
+    image: '/Portfolio_website_mockup2.png'
   },
   {
     id: 'ai-navigation',
