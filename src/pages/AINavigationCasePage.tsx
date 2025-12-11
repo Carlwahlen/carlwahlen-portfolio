@@ -37,18 +37,23 @@ const AINavigationCasePage: React.FC = () => {
       
       <div className="min-h-screen bg-white">
         {/* 1) HERO */}
-        <section className="pt-4 pb-4 lg:pt-8 lg:pb-16">
-          <div className="container-custom">
-            <div className="max-w-[680px] mx-auto text-center">
-              <h1 className="text-4xl md:text-5xl text-gray-900 mb-8 font-medium">
+        <section className="pt-20 pb-24 lg:pt-36 lg:pb-32">
+          <div className="container-hero">
+            <div className="text-center w-full">
+              {/* Badge */}
+              <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-xs font-medium mb-6">
+                AI
+              </div>
+              
+              <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-tight">
                   AI Navigation Engine
                 </h1>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8 font-normal">
+              <p className="text-xl text-gray-600 leading-relaxed mb-8 font-normal max-w-2xl mx-auto">
                 Prototype for intent-based navigation enabling users to search naturally, without knowing the website's structure or terminology.
                 </p>
                 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                   <Link 
                     to="/contact" 
                   className="btn-primary inline-flex items-center justify-center"
@@ -64,12 +69,12 @@ const AINavigationCasePage: React.FC = () => {
                 </div>
               </div>
 
-            {/* Large mockup centered */}
+            {/* Hero mockup - Laptop with phones */}
             <div className="flex justify-center mt-16 lg:mt-20">
                 <img
                   src="/Ai-navigation-bot.png"
                   alt="AI Navigation Engine interface"
-                className="w-full max-w-[40%]"
+                className="w-full max-w-[40%] lg:max-w-[900px]"
                   loading="lazy"
                 />
             </div>
