@@ -107,12 +107,6 @@ const Home: React.FC = () => {
             </h1>
             
             <div className="flex flex-wrap justify-center gap-3 mb-10">
-              <Link
-                to="/about"
-                className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer"
-              >
-                About me
-              </Link>
               {servicesEnabled && (
                 <>
                   <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
@@ -134,6 +128,12 @@ const Home: React.FC = () => {
                 className="btn-primary text-base px-8 py-3.5 rounded-full font-medium"
               >
                 Let's talk
+              </Link>
+              <Link
+                to="/about"
+                className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium"
+              >
+                About me
               </Link>
               {servicesEnabled && (
                 <Link to="/services" className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium">
