@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { servicesEnabled } from '../utils/featureFlags';
 
 interface RelatedArticle {
   title: string;
@@ -33,13 +34,13 @@ const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentPage, articles
           category: "Case Study",
           readTime: "4 min read"
         },
-        {
+        ...(servicesEnabled ? [{
           title: "Product Strategy Consulting Services",
           description: "Comprehensive overview of our consulting approach",
           url: "/services",
           category: "Services",
           readTime: "3 min read"
-        }
+        }] : [])
       ],
       services: [
         {
@@ -65,13 +66,13 @@ const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentPage, articles
         }
       ],
       case: [
-        {
+        ...(servicesEnabled ? [{
           title: "Our Product Strategy Services",
           description: "Comprehensive consulting services for data-driven products",
           url: "/services",
           category: "Services",
           readTime: "3 min read"
-        },
+        }] : []),
         {
           title: "About Carl Wahlen",
           description: "Learn more about our approach and methodology",
@@ -95,13 +96,13 @@ const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentPage, articles
           category: "Case Studies",
           readTime: "3 min read"
         },
-        {
+        ...(servicesEnabled ? [{
           title: "Services We Offer",
           description: "Comprehensive product strategy consulting services",
           url: "/services",
           category: "Services",
           readTime: "3 min read"
-        },
+        }] : []),
         {
           title: "Frequently Asked Questions",
           description: "Common questions about our consulting approach",
@@ -118,13 +119,13 @@ const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentPage, articles
           category: "Case Studies",
           readTime: "3 min read"
         },
-        {
+        ...(servicesEnabled ? [{
           title: "Services Overview",
           description: "Comprehensive product strategy consulting services",
           url: "/services",
           category: "Services",
           readTime: "3 min read"
-        },
+        }] : []),
         {
           title: "About Our Approach",
           description: "Learn more about our methodology and experience",
@@ -134,13 +135,13 @@ const RelatedArticles: React.FC<RelatedArticlesProps> = ({ currentPage, articles
         }
       ],
       contact: [
-        {
+        ...(servicesEnabled ? [{
           title: "Our Services",
           description: "Comprehensive product strategy consulting services",
           url: "/services",
           category: "Services",
           readTime: "3 min read"
-        },
+        }] : []),
         {
           title: "Case Studies",
           description: "See examples of our successful projects",

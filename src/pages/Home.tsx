@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import CaseCarousel from '../components/CaseCarousel';
 import { cases } from '../data/cases';
+import { servicesEnabled } from '../utils/featureFlags';
 
 const Home: React.FC = () => {
   return (
@@ -112,15 +113,19 @@ const Home: React.FC = () => {
               >
                 About me
               </Link>
-              <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
-                Product Strategy
-              </Link>
-              <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
-                Business development
-              </Link>
-              <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
-                UX/UI Design
-              </Link>
+              {servicesEnabled && (
+                <>
+                  <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
+                    Product Strategy
+                  </Link>
+                  <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
+                    Business development
+                  </Link>
+                  <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
+                    UX/UI Design
+                  </Link>
+                </>
+              )}
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-0">
@@ -130,9 +135,11 @@ const Home: React.FC = () => {
               >
                 Let's talk
               </Link>
-              <Link to="/services" className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium">
-                Explore Services
-              </Link>
+              {servicesEnabled && (
+                <Link to="/services" className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium">
+                  Explore Services
+                </Link>
+              )}
             </div>
           </div>
           
@@ -170,12 +177,14 @@ const Home: React.FC = () => {
               <p className="text-base text-gray-600 leading-relaxed mb-6">
                 I help organisations move from idea to working prototype through research, structured decision-making and close collaboration between design, product and technology.
               </p>
-              <Link 
-                to="/services" 
-                className="btn-secondary inline-flex items-center justify-center text-base self-start"
-              >
-                Services
-              </Link>
+              {servicesEnabled && (
+                <Link 
+                  to="/services" 
+                  className="btn-secondary inline-flex items-center justify-center text-base self-start"
+                >
+                  Services
+                </Link>
+              )}
             </div>
           </div>
         </div>

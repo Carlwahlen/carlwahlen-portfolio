@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { servicesEnabled } from '../utils/featureFlags';
 import { 
   getAllAreas, 
   getKnowledgePagesByArea, 
@@ -99,9 +100,11 @@ const KnowledgeOverviewPage: React.FC = () => {
               <p className="text-gray-600 mb-6">
                 I help companies build products that combine strategy, technology, and design.
               </p>
-              <Link to="/Services" className="btn-primary">
-                View my services
-              </Link>
+              {servicesEnabled && (
+                <Link to="/Services" className="btn-primary">
+                  View my services
+                </Link>
+              )}
             </div>
           </div>
         </section>

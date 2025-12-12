@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import RelatedArticles from '../components/RelatedArticles';
 import Breadcrumbs from '../components/Breadcrumbs';
+import { servicesEnabled } from '../utils/featureFlags';
 
 const Services: React.FC = () => {
   const [currentTime, setCurrentTime] = useState<string>('');
@@ -25,6 +26,13 @@ const Services: React.FC = () => {
       <Helmet>
         <title>Services - Carl Wahlen</title>
         <meta name="description" content="Product strategy consulting services in Sweden: data-driven product development, UX/UI design, business development, and technology strategy. Let's build something great together." />
+        
+        {/* Add noindex, nofollow when Services page is disabled */}
+        {!servicesEnabled && (
+          <>
+            <meta name="robots" content="noindex, nofollow" />
+          </>
+        )}
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

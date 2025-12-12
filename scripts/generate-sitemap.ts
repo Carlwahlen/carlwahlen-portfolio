@@ -15,6 +15,9 @@ import { join } from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
+// Check if Services page is enabled via environment variable
+const servicesEnabled = process.env.VITE_SERVICES_ENABLED === 'true';
+
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -22,12 +25,13 @@ const BASE_URL = 'https://carlwahlen.com';
 const TODAY = new Date().toISOString().split('T')[0]; // YYYY-MM-DD format
 
 // Static pages configuration
+// Conditionally include Services page based on feature flag
 const staticPages = [
   { path: '/', priority: '1.0', changefreq: 'weekly' },
   { path: '/about', priority: '0.8', changefreq: 'monthly' },
   { path: '/contact', priority: '0.9', changefreq: 'monthly' },
   { path: '/faq', priority: '0.7', changefreq: 'monthly' },
-  { path: '/services', priority: '0.8', changefreq: 'monthly' },
+  ...(servicesEnabled ? [{ path: '/services', priority: '0.8', changefreq: 'monthly' }] : []),
   { path: '/case', priority: '0.8', changefreq: 'monthly' },
   { path: '/knowledge', priority: '0.8', changefreq: 'weekly' },
 ];

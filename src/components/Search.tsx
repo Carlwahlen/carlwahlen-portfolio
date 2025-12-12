@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { servicesEnabled } from '../utils/featureFlags';
 
 interface SearchResult {
   id: string;
@@ -40,14 +41,15 @@ const Search: React.FC<SearchProps> = ({
       category: 'Page',
       type: 'page'
     },
-    {
+    // Conditionally include Services in search results
+    ...(servicesEnabled ? [{
       id: 'services',
       title: 'Services - Product Strategy Consulting',
       description: 'Comprehensive product strategy consulting services including technical PM, payments & compliance, and UX for complex systems.',
       url: '/services',
       category: 'Page',
-      type: 'page'
-    },
+      type: 'page' as const
+    }] : []),
     {
       id: 'about',
       title: 'About - Carl Wahlen',

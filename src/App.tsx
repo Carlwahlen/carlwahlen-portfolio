@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation, useNavigationType } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigationType, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import Header from './components/Header';
 import Footer from './components/Footer';
@@ -8,6 +8,7 @@ import AINavigationDemoWidget from './components/AINavigationDemoWidget';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Case from './pages/Case';
+import { servicesEnabled } from './utils/featureFlags';
 import FounderCasePage from './pages/FounderCasePage';
 import StyleScandinaviaCasePage from './pages/StyleScandinaviaCasePage';
 import HellmanPartnersCasePage from './pages/HellmanPartnersCasePage';
@@ -95,9 +96,20 @@ const App: React.FC = () => {
           
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/Services" element={<Services />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/tjanster" element={<Services />} />
+            {/* Services page - conditionally available via feature flag */}
+            {/* To re-enable: Set VITE_SERVICES_ENABLED=true in .env and restart */}
+            <Route 
+              path="/Services" 
+              element={servicesEnabled ? <Services /> : <Navigate to="/" replace />} 
+            />
+            <Route 
+              path="/services" 
+              element={servicesEnabled ? <Services /> : <Navigate to="/" replace />} 
+            />
+            <Route 
+              path="/tjanster" 
+              element={servicesEnabled ? <Services /> : <Navigate to="/" replace />} 
+            />
             <Route path="/case" element={<Case />} />
             <Route path="/case/payment-orchestration" element={<FounderCasePage />} />
             <Route path="/case/style-scandinavia" element={<StyleScandinaviaCasePage />} />

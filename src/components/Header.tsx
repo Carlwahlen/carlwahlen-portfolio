@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Search from './Search';
+import { servicesEnabled } from '../utils/featureFlags';
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -36,8 +37,9 @@ const Header: React.FC = () => {
     }
   }, [isMobileMenuOpen]);
 
+  // Filter out Services from navigation when feature flag is disabled
   const navItems = [
-    { path: '/Services', label: 'Services' },
+    ...(servicesEnabled ? [{ path: '/Services', label: 'Services' }] : []),
     { path: '/case', label: 'Cases' },
     { path: '/about', label: 'About' }
   ];

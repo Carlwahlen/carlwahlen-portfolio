@@ -1,12 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { DEFAULT_SERVICES_PATH, KnowledgePageMeta } from '../../content/knowledgePages';
+import { servicesEnabled } from '../../utils/featureFlags';
 
 interface KnowledgeToServicesCTAProps {
   page?: KnowledgePageMeta;
 }
 
 const KnowledgeToServicesCTA: React.FC<KnowledgeToServicesCTAProps> = ({ page }) => {
+  // Hide CTA when Services page is disabled
+  if (!servicesEnabled) {
+    return null;
+  }
+
   const servicePath = page?.primaryServicePath ?? DEFAULT_SERVICES_PATH;
 
   return (
