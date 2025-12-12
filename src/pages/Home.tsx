@@ -8,13 +8,13 @@ const Home: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Carl Wahlen - Product Strategist & UX Consultant</title>
+        <title>Carl Wahlen - UX Designer with Product Focus</title>
         <meta name="description" content="Product strategy consultant in Sweden specializing in data-driven products, UX/UI design, business development, and technology strategy. Experience in developing scalable products that unite strategy, technology, and design for enhanced business value." />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://carlwahlen.com/" />
-        <meta property="og:title" content="Carl Wahlen - Product Strategist & UX Consultant" />
+        <meta property="og:title" content="Carl Wahlen - UX Designer with Product Focus" />
         <meta property="og:description" content="Product strategy consultant in Sweden specializing in data-driven products, UX/UI design, business development, and technology strategy. Experience in developing scalable products that unite strategy, technology, and design for enhanced business value." />
         <meta property="og:image" content="https://carlwahlen.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -24,7 +24,7 @@ const Home: React.FC = () => {
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://carlwahlen.com/" />
-        <meta property="twitter:title" content="Carl Wahlen - Product Strategist & UX Consultant" />
+        <meta property="twitter:title" content="Carl Wahlen - UX Designer with Product Focus" />
         <meta property="twitter:description" content="Product strategy consultant in Sweden specializing in data-driven products, UX/UI design, business development, and technology strategy. Experience in developing scalable products that unite strategy, technology, and design for enhanced business value." />
         <meta property="twitter:image" content="https://carlwahlen.com/og-image.jpg" />
 
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
           "founder": {
             "@type": "Person",
             "name": "Carl Wahlen",
-            "jobTitle": "Product Strategist & UX Consultant"
+            "jobTitle": "UX Designer with Product Focus"
           },
           "sameAs": [
             "https://github.com/CarlWahlen",
@@ -98,7 +98,7 @@ const Home: React.FC = () => {
           {/* Text Content - Centered */}
           <div className="text-center max-w-5xl mx-auto mb-8">
             <div className="text-[14px] font-semibold text-gray-900 mb-8 tracking-wider uppercase">
-              Product Strategist & UX Consultant
+              UX Designer with Product Focus
             </div>
             
             <h1 className="text-[36px] md:text-[40px] lg:text-[40px] text-gray-900 mb-12 leading-[1.2] font-medium text-balance">
