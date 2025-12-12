@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import CaseCarousel from '../components/CaseCarousel';
-import StickFigure from '../components/StickFigure';
 import { cases } from '../data/cases';
 
 const Home: React.FC = () => {
@@ -95,8 +94,6 @@ const Home: React.FC = () => {
             backgroundSize: '80px 80px',
           }}
         />
-        {/* Stick Figure Animation */}
-        <StickFigure />
         <div className="container-custom relative z-10">
           {/* Text Content - Centered */}
           <div className="text-center max-w-5xl mx-auto mb-8">
@@ -112,7 +109,6 @@ const Home: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-3 mb-10">
               <Link
                 to="/about"
-                data-stick-target="about"
                 className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer"
               >
                 About me
@@ -131,7 +127,6 @@ const Home: React.FC = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-0">
               <Link
                 to="/kontakt"
-                data-stick-target="cta"
                 className="btn-primary text-base px-8 py-3.5 rounded-full font-medium"
               >
                 Let's talk
