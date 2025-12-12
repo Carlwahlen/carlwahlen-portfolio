@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import CaseCarousel from '../components/CaseCarousel';
+import StickFigure from '../components/StickFigure';
 import { cases } from '../data/cases';
 
 const Home: React.FC = () => {
@@ -94,6 +95,8 @@ const Home: React.FC = () => {
             backgroundSize: '80px 80px',
           }}
         />
+        {/* Stick Figure Animation */}
+        <StickFigure />
         <div className="container-custom relative z-10">
           {/* Text Content - Centered */}
           <div className="text-center max-w-5xl mx-auto mb-8">
