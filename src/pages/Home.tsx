@@ -102,8 +102,7 @@ const Home: React.FC = () => {
             </div>
             
             <h1 className="text-[36px] md:text-[40px] lg:text-[40px] text-gray-900 mb-12 leading-[1.2] font-medium text-balance">
-              <span className="block max-w-5xl mx-auto">Build digital products that solve real problems</span>
-              <span className="block max-w-4xl mx-auto">and support the core business.</span>
+              <span className="block max-w-5xl mx-auto">Build digital products by framing problems, mapping user journeys, and making clear MVP decisions.</span>
             </h1>
             
             <div className="flex flex-wrap justify-center gap-3 mb-10">
