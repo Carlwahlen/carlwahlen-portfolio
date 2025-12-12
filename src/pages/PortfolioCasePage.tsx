@@ -57,6 +57,20 @@ const PortfolioCasePage: React.FC = () => {
           </div>
         </section>
 
+        {/* Sitemap Visualization */}
+        <section className="py-16 lg:py-24 bg-white">
+          <div className="container-custom">
+            <div className="flex justify-center">
+              <img
+                src="/Sitemap_PortfolioWeb.svg"
+                alt="Portfolio website sitemap"
+                className="w-full max-w-4xl"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Breadcrumbs */}
         <Breadcrumbs />
 
