@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-// import Testimonials from '../components/Testimonials';
 import RelatedArticles from '../components/RelatedArticles';
 import Breadcrumbs from '../components/Breadcrumbs';
 

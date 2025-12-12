@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import CTABand from '../components/CTABand';
 import RelatedArticles from '../components/RelatedArticles';
-// import Testimonials from '../components/Testimonials';
 import Breadcrumbs from '../components/Breadcrumbs';
 
 const About: React.FC = () => {
