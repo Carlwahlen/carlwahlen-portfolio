@@ -57,6 +57,9 @@ const PortfolioCasePage: React.FC = () => {
           </div>
         </section>
 
+        {/* Breadcrumbs */}
+        <Breadcrumbs />
+
         {/* Sitemap Visualization */}
         <section className="py-16 lg:py-24 bg-white">
           <div className="container-custom">
@@ -70,9 +73,6 @@ const PortfolioCasePage: React.FC = () => {
             </div>
           </div>
         </section>
-
-        {/* Breadcrumbs */}
-        <Breadcrumbs />
 
         {/* Divider */}
         <div className="border-t border-gray-200"></div>
