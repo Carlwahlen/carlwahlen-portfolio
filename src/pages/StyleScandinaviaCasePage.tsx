@@ -67,11 +67,11 @@ const StyleScandinaviaCasePage: React.FC = () => {
         <section className="py-24 lg:py-32">
           <div className="container-custom">
             <div className="max-w-[680px] mx-auto">
-              <h2 className="text-3xl text-gray-900 mb-6 text-center font-medium">
+              <h2 className="text-3xl text-gray-900 mb-6 text-left font-medium">
                 Why This Matters
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed mb-12 text-center font-normal">
+              <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left font-normal">
                 A complete rebuild of Style Scandinavia's digital presence focusing on user experience, search optimization, and accessibility. The project resulted in measurable improvements already in the first week.
               </p>
               
@@ -146,7 +146,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
         {/* 4) CONCEPT + CORE SOLUTION */}
         <section className="py-24 lg:py-32 bg-gray-50">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
-            <div className="max-w-[680px] mx-auto mb-16 text-center">
+            <div className="max-w-[680px] mx-auto mb-16 text-left">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 Concept: My Approach
               </h2>
@@ -235,7 +235,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
         {/* 5) CAPABILITIES / WHAT THIS ENABLES */}
         <section className="py-24 lg:py-32">
           <div className="container-custom">
-            <div className="max-w-[680px] mx-auto mb-12 text-center">
+            <div className="max-w-[680px] mx-auto mb-12 text-left">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 What This Solution Enables
               </h2>
@@ -307,7 +307,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
         {/* 6) PROCESS - HOW I APPROACHED */}
         <section className="py-24 lg:py-32 bg-gray-50">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
-            <div className="max-w-[680px] mx-auto mb-12 text-center">
+            <div className="max-w-[680px] mx-auto mb-12 text-left">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 How I Approached the Problem
               </h2>
@@ -384,7 +384,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
         {/* 7) RESULTS & METRICS */}
         <section className="py-24 lg:py-32">
           <div className="container-custom">
-            <div className="max-w-[680px] mx-auto mb-12 text-center">
+            <div className="max-w-[680px] mx-auto mb-12 text-left">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 Results & Metrics
               </h2>
