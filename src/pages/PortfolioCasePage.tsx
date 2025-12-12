@@ -72,7 +72,7 @@ const PortfolioCasePage: React.FC = () => {
               />
             </div>
             <div className="max-w-4xl mx-auto">
-              <p className="text-lg text-gray-600 leading-relaxed text-left font-normal">
+              <p className="text-sm text-gray-600 leading-relaxed text-left font-normal">
                 This sitemap outlines the core structure of my portfolio and served as a foundation for defining the MVP, navigation logic, and content priorities. By mapping user flows and page relationships early, I could scope the project effectively, ensure consistency across case pages, and create a structure that supports both clarity and scalability as new projects are added.
               </p>
             </div>
