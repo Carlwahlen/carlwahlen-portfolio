@@ -76,17 +76,16 @@ const StickFigure: React.FC = () => {
 
       const aboutMeRect = aboutMeButton.getBoundingClientRect();
       const letsTalkRect = letsTalkButton.getBoundingClientRect();
-      const containerRect = containerRef.current.getBoundingClientRect();
 
-      // Start position: center of About me button, snapped to grid
-      const startX = aboutMeRect.left + aboutMeRect.width / 2 - containerRect.left;
-      const startY = aboutMeRect.top + aboutMeRect.height / 2 - containerRect.top;
+      // Start position: center of About me button, snapped to grid (using viewport coordinates for fixed positioning)
+      const startX = aboutMeRect.left + aboutMeRect.width / 2;
+      const startY = aboutMeRect.top + aboutMeRect.height / 2;
       const startXSnapped = snapToGrid(startX);
       const startYSnapped = snapToGrid(startY);
 
       // End position: center of Let's talk button, snapped to grid
-      const endX = letsTalkRect.left + letsTalkRect.width / 2 - containerRect.left;
-      const endY = letsTalkRect.top + letsTalkRect.height / 2 - containerRect.top;
+      const endX = letsTalkRect.left + letsTalkRect.width / 2;
+      const endY = letsTalkRect.top + letsTalkRect.height / 2;
       const endXSnapped = snapToGrid(endX);
       const endYSnapped = snapToGrid(endY);
 
@@ -191,16 +190,19 @@ const StickFigure: React.FC = () => {
         } else if (currentPhase === 'waving') {
           // Wave for 2.5 seconds, then restart
           if (elapsed >= waveDuration) {
+            // Reset everything for new loop
             currentPhase = 'walking';
             setAnimationPhase('walking');
             setIsWaving(false);
             setFacingDirection('right');
-            startTime = null;
             currentPathIndex = 0;
             // Reset to start position
             setPosition({ x: startXSnapped - 12, y: startYSnapped - 12 });
-            // Restart animation
+            // Restart animation immediately
             startTime = performance.now();
+            // Continue animation loop
+            animationId = requestAnimationFrame(animate);
+            return;
           }
         }
 
@@ -262,23 +264,29 @@ const StickFigure: React.FC = () => {
     ? Math.abs(Math.sin(walkCycle * Math.PI * 2)) * 1.5 
     : 0;
 
+  if (!isReady) return null;
+
   return (
     <div
       ref={containerRef}
-      className="absolute inset-0 pointer-events-none z-20"
-      style={{ overflow: 'visible' }}
+      className="fixed inset-0 pointer-events-none"
+      style={{ 
+        zIndex: 9999,
+        overflow: 'visible',
+      }}
     >
       <svg
         width="24"
         height="24"
         viewBox="0 0 24 24"
         style={{
-          position: 'absolute',
+          position: 'fixed',
           left: `${position.x}px`,
           top: `${position.y - bodyBob}px`,
           transform: facingDirection === 'left' ? 'scaleX(-1)' : 'none',
-          transition: animationPhase === 'waving' ? 'none' : 'left 0.05s linear, top 0.05s linear',
+          transition: animationPhase === 'waving' ? 'none' : 'none',
           opacity: isReady ? 1 : 0,
+          zIndex: 10000,
         }}
         className="pointer-events-none"
       >
