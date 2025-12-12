@@ -63,13 +63,18 @@ const PortfolioCasePage: React.FC = () => {
         {/* Sitemap Visualization */}
         <section className="py-16 lg:py-24 bg-white">
           <div className="container-custom">
-            <div className="flex justify-center">
+            <div className="flex justify-center mb-8">
               <img
                 src="/Sitemap_PortfolioWeb.svg"
                 alt="Portfolio website sitemap"
                 className="w-full max-w-4xl"
                 loading="lazy"
               />
+            </div>
+            <div className="max-w-4xl mx-auto">
+              <p className="text-lg text-gray-600 leading-relaxed text-left font-normal">
+                This sitemap outlines the core structure of my portfolio and served as a foundation for defining the MVP, navigation logic, and content priorities. By mapping user flows and page relationships early, I could scope the project effectively, ensure consistency across case pages, and create a structure that supports both clarity and scalability as new projects are added.
+              </p>
             </div>
           </div>
         </section>
