@@ -110,7 +110,11 @@ const Home: React.FC = () => {
             </h1>
             
             <div className="flex flex-wrap justify-center gap-3 mb-10">
-              <Link to="/about" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
+              <Link
+                to="/about"
+                data-stick-target="about"
+                className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer"
+              >
                 About me
               </Link>
               <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
@@ -125,7 +129,11 @@ const Home: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-0">
-              <Link to="/kontakt" className="btn-primary text-base px-8 py-3.5 rounded-full font-medium">
+              <Link
+                to="/kontakt"
+                data-stick-target="cta"
+                className="btn-primary text-base px-8 py-3.5 rounded-full font-medium"
+              >
                 Let's talk
               </Link>
               <Link to="/services" className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium">

@@ -1,12 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react';
 
 const StickFigure: React.FC = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: -1000, y: -1000 });
   const [isWaving, setIsWaving] = useState(false);
   const [waveAngle, setWaveAngle] = useState(0);
   const [walkCycle, setWalkCycle] = useState(0);
   const [facingDirection, setFacingDirection] = useState<'right' | 'left' | 'down'>('right');
   const [animationPhase, setAnimationPhase] = useState<'walking' | 'climbing' | 'waving'>('walking');
+  const [isReady, setIsReady] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const GRID_SIZE = 80; // Match the grid pattern size
@@ -54,9 +55,9 @@ const StickFigure: React.FC = () => {
   }, [animationPhase]);
 
   useEffect(() => {
-    // Find the buttons
-    const aboutMeButton = document.querySelector('a[href="/about"]') as HTMLAnchorElement;
-    const letsTalkButton = document.querySelector('a[href="/kontakt"]') as HTMLAnchorElement;
+    // Find the buttons inside the page (prefer data attributes to avoid picking header links)
+    const aboutMeButton = document.querySelector('[data-stick-target="about"]') as HTMLAnchorElement;
+    const letsTalkButton = document.querySelector('[data-stick-target="cta"]') as HTMLAnchorElement;
 
     if (!aboutMeButton || !letsTalkButton) return;
 
@@ -208,6 +209,7 @@ const StickFigure: React.FC = () => {
 
       // Initial position
       setPosition({ x: startXSnapped - 12, y: startYSnapped - 12 });
+      setIsReady(true);
       startTime = performance.now();
 
       // Start animation
@@ -276,6 +278,7 @@ const StickFigure: React.FC = () => {
           top: `${position.y - bodyBob}px`,
           transform: facingDirection === 'left' ? 'scaleX(-1)' : 'none',
           transition: animationPhase === 'waving' ? 'none' : 'left 0.05s linear, top 0.05s linear',
+          opacity: isReady ? 1 : 0,
         }}
         className="pointer-events-none"
       >
