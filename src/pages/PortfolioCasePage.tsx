@@ -72,7 +72,7 @@ const PortfolioCasePage: React.FC = () => {
               />
             </div>
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-base text-gray-900 mb-4 text-left font-medium">
+              <h2 className="text-xl text-gray-900 mb-4 text-left font-medium">
                 Information Architecture & MVP Scope
               </h2>
               <p className="text-sm text-gray-600 leading-relaxed text-left font-normal">
