@@ -11,6 +11,13 @@ const TestHome: React.FC = () => {
 
   return (
     <>
+      <style>{`
+        @media (min-width: 768px) {
+          .profile-image-responsive {
+            object-position: calc(50% + 30px) calc(25% + 80px) !important;
+          }
+        }
+      `}</style>
       <Helmet>
         <title>Test Home - Design Testing - Carl Wahlen</title>
         <meta name="description" content="Test page for design experiments - not indexed" />
@@ -40,8 +47,11 @@ const TestHome: React.FC = () => {
                     <img
                       src="/Portfolio_Pic.jpg"
                       alt="Carl Wahlen"
-                      className="w-full h-full object-cover grayscale"
-                      style={{ objectPosition: 'calc(50% + 30px) calc(25% + 80px)', transform: 'scale(1.4)' }}
+                      className="w-full h-full object-cover grayscale profile-image-responsive"
+                      style={{ 
+                        objectPosition: 'calc(50% + 10px) calc(25% + 60px)',
+                        transform: 'scale(1.4)'
+                      }}
                       loading="eager"
                     />
                   </div>
