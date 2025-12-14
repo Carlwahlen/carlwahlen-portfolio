@@ -43,7 +43,8 @@ const TestHome: React.FC = () => {
                       className="w-full h-full object-cover grayscale profile-image-responsive"
                       style={{ 
                         objectPosition: 'calc(90% + 8px) 0%',
-                        objectFit: 'cover'
+                        objectFit: 'cover',
+                        transform: 'scale(1.15)'
                       }}
                       loading="eager"
                     />
