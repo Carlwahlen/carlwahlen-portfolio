@@ -43,8 +43,8 @@ const AINavigationCasePage: React.FC = () => {
               {/* Badge */}
               <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-xs font-medium mb-6">
                 AI
-              </div>
-              
+                </div>
+                
               <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-tight">
                   AI Navigation Engine
                 </h1>

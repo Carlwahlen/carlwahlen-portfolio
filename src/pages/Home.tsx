@@ -109,15 +109,15 @@ const Home: React.FC = () => {
             <div className="flex flex-wrap justify-center gap-3 mb-10">
               {servicesEnabled && (
                 <>
-                  <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
-                    Product Strategy
-                  </Link>
-                  <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
-                    Business development
-                  </Link>
-                  <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
-                    UX/UI Design
-                  </Link>
+              <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
+                Product Strategy
+              </Link>
+              <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
+                Business development
+              </Link>
+              <Link to="/services" className="px-5 py-2.5 bg-gray-100 text-gray-700 rounded-full text-sm font-medium hover:bg-gray-200 transition-colors no-underline hover:no-underline cursor-pointer">
+                UX/UI Design
+              </Link>
                 </>
               )}
             </div>
@@ -136,9 +136,9 @@ const Home: React.FC = () => {
                 About me
               </Link>
               {servicesEnabled && (
-                <Link to="/services" className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium">
-                  Explore Services
-                </Link>
+              <Link to="/services" className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium">
+                Explore Services
+              </Link>
               )}
             </div>
           </div>
@@ -178,12 +178,12 @@ const Home: React.FC = () => {
                 I help organisations move from idea to working prototype through research, structured decision-making and close collaboration between design, product and technology.
               </p>
               {servicesEnabled && (
-                <Link 
-                  to="/services" 
-                  className="btn-secondary inline-flex items-center justify-center text-base self-start"
-                >
-                  Services
-                </Link>
+              <Link 
+                to="/services" 
+                className="btn-secondary inline-flex items-center justify-center text-base self-start"
+              >
+                Services
+              </Link>
               )}
             </div>
           </div>

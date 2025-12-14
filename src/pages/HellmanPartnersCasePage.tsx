@@ -22,12 +22,12 @@ const HellmanPartnersCasePage: React.FC = () => {
               </div>
               
               <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-tight">
-                Hellman & Partners
-              </h1>
+                  Hellman & Partners
+                </h1>
               <p className="text-xl text-gray-600 leading-relaxed mb-8 font-normal max-w-2xl mx-auto">
                 Strategic Product & Market Foundation. Created the analytical and conceptual groundwork for a future digital platform.
-              </p>
-              
+                </p>
+                
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
                 <Link 
@@ -42,17 +42,17 @@ const HellmanPartnersCasePage: React.FC = () => {
                 >
                   View other cases
                 </Link>
+                </div>
               </div>
-            </div>
 
             {/* Hero mockup - Laptop with phones */}
             <div className="flex justify-center mt-16 lg:mt-20">
-              <img
-                src="/Payment_app_flow.png"
-                alt="Hellman & Partners PropTech concept"
+                <img
+                  src="/Payment_app_flow.png"
+                  alt="Hellman & Partners PropTech concept"
                 className="w-full max-w-[40%] lg:max-w-[900px] filter blur-sm"
-                loading="lazy"
-              />
+                  loading="lazy"
+                />
             </div>
           </div>
         </section>
@@ -154,7 +154,7 @@ const HellmanPartnersCasePage: React.FC = () => {
                 Worked on developing the strategic, analytical, and conceptual foundation that would enable future product development. Defined what the platform would solve, who it would help, and how the business would work.
               </p>
             </div>
-
+            
             {/* 3-column grid with visuals */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ gap: '48px' }}>
               {/* Card 1: Market Research */}
@@ -179,7 +179,7 @@ const HellmanPartnersCasePage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
+              
               {/* Card 2: Business Modeling */}
               <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '32px' }}>
                 <h3 className="text-xl text-gray-900 mb-4 font-medium">Business Modeling</h3>
@@ -202,7 +202,7 @@ const HellmanPartnersCasePage: React.FC = () => {
                   </li>
                 </ul>
               </div>
-
+              
               {/* Card 3: Platform Architecture */}
               <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '32px' }}>
                 <h3 className="text-xl text-gray-900 mb-4 font-medium">Platform Architecture</h3>
@@ -340,7 +340,7 @@ const HellmanPartnersCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.757.426 1.757 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.757-2.924 1.757-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.757-.426-1.757-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.607 2.296.07 2.572-1.065z" />
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                     </svg>
-                  </div>
+              </div>
                   <h3 className="text-xl text-gray-900 mb-3 font-medium">Strategy</h3>
                   <ul className="space-y-2 text-gray-700 text-left max-w-xs mx-auto text-sm font-normal">
                     <li className="flex items-start">
@@ -359,7 +359,7 @@ const HellmanPartnersCasePage: React.FC = () => {
                     <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
                     </svg>
-                  </div>
+              </div>
                   <h3 className="text-xl text-gray-900 mb-3 font-medium">Communication</h3>
                   <ul className="space-y-2 text-gray-700 text-left max-w-xs mx-auto text-sm font-normal">
                     <li className="flex items-start">
@@ -373,8 +373,8 @@ const HellmanPartnersCasePage: React.FC = () => {
                   </ul>
                 </div>
               </div>
-            </div>
-          </div>
+                </div>
+              </div>
         </section>
 
         {/* Divider */}
@@ -410,23 +410,23 @@ const HellmanPartnersCasePage: React.FC = () => {
             <div className="max-w-[680px] mx-auto text-center">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 Interested in learning more?
-              </h2>
+            </h2>
               <p className="text-lg text-gray-600 mb-10 leading-relaxed font-normal">
                 Let's discuss how I can help build scalable, user-centric solutions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  to="/contact" 
-                  className="btn-primary text-lg px-8 py-4"
-                >
-                  Contact me
-                </Link>
-                <Link 
-                  to="/case" 
-                  className="btn-secondary text-lg px-8 py-4"
-                >
-                  View other cases
-                </Link>
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                to="/contact" 
+                className="btn-primary text-lg px-8 py-4"
+              >
+                Contact me
+              </Link>
+              <Link 
+                to="/case" 
+                className="btn-secondary text-lg px-8 py-4"
+              >
+                View other cases
+              </Link>
               </div>
             </div>
           </div>

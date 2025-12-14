@@ -82,7 +82,7 @@ const ContactForm: React.FC = () => {
     setIsSubmitting(true);
     setError(null);
     
-    // EmailJS configuration - Get from environment variables
+      // EmailJS configuration - Get from environment variables
     const env = (import.meta as any).env || {};
     const serviceId = env.VITE_EMAILJS_SERVICE_ID as string | undefined;
     const templateId = env.VITE_EMAILJS_TEMPLATE_ID as string | undefined;

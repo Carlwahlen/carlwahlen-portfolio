@@ -63,11 +63,11 @@ const Breadcrumbs: React.FC = () => {
               .map(word => word.charAt(0).toUpperCase() + word.slice(1))
               .join(' ');
           } else {
-            // Capitalize first letter and replace hyphens with spaces
-            displayName = segment
-              .split('-')
-              .map(word => word.charAt(0).toUpperCase() + word.slice(1))
-              .join(' ');
+          // Capitalize first letter and replace hyphens with spaces
+          displayName = segment
+            .split('-')
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(' ');
           }
       }
 

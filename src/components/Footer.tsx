@@ -67,17 +67,17 @@ const Footer: React.FC = () => {
 
           {/* Services */}
           {servicesEnabled && (
-            <div>
-              <h3 className="text-xl text-gray-900 mb-4">Services</h3>
-              <ul className="space-y-2">
-                <li><Link to="/services#product-gtm" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Product Strategy</Link></li>
-                <li><Link to="/services#technical-pm" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Technical PM</Link></li>
-                <li><Link to="/services" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Payments & Compliance</Link></li>
-                <li><Link to="/services#ux-complex-systems" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">UX for Complex Systems</Link></li>
-                <li><Link to="/services#data-driven-development" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Data-driven Development</Link></li>
-                <li><Link to="/services#business-development" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Business Development</Link></li>
-              </ul>
-            </div>
+          <div>
+            <h3 className="text-xl text-gray-900 mb-4">Services</h3>
+            <ul className="space-y-2">
+              <li><Link to="/services#product-gtm" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Product Strategy</Link></li>
+              <li><Link to="/services#technical-pm" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Technical PM</Link></li>
+              <li><Link to="/services" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Payments & Compliance</Link></li>
+              <li><Link to="/services#ux-complex-systems" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">UX for Complex Systems</Link></li>
+              <li><Link to="/services#data-driven-development" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Data-driven Development</Link></li>
+              <li><Link to="/services#business-development" className="text-gray-600 hover:text-lux-green-500 transition-colors text-sm">Business Development</Link></li>
+            </ul>
+          </div>
           )}
         </div>
 
