@@ -11,18 +11,6 @@ const TestHome: React.FC = () => {
 
   return (
     <>
-      <style>{`
-        @media (min-width: 640px) and (max-width: 1023px) {
-          .profile-image-responsive {
-            object-position: calc(50% + 10px) calc(25% + 60px) !important;
-          }
-        }
-        @media (min-width: 1024px) {
-          .profile-image-responsive {
-            object-position: calc(50% + 10px) calc(25% + 60px) !important;
-          }
-        }
-      `}</style>
       <Helmet>
         <title>Test Home - Design Testing - Carl Wahlen</title>
         <meta name="description" content="Test page for design experiments - not indexed" />
@@ -54,9 +42,8 @@ const TestHome: React.FC = () => {
                       alt="Carl Wahlen"
                       className="w-full h-full object-cover grayscale profile-image-responsive"
                       style={{ 
-                        objectPosition: 'calc(50% + 10px) calc(25% + 60px)',
-                        objectFit: 'cover',
-                        transform: 'scale(1.3)'
+                        objectPosition: '50% center',
+                        objectFit: 'cover'
                       }}
                       loading="eager"
                     />
