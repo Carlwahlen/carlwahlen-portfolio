@@ -6,6 +6,7 @@ import Footer from './components/Footer';
 import CookieConsent from './components/CookieConsent';
 import AINavigationDemoWidget from './components/AINavigationDemoWidget';
 import Home from './pages/Home';
+import TestHome from './pages/TestHome';
 import Services from './pages/Services';
 import Case from './pages/Case';
 import { servicesEnabled } from './utils/featureFlags';
@@ -96,6 +97,8 @@ const App: React.FC = () => {
           
           <Routes>
             <Route path="/" element={<Home />} />
+            {/* Test page for design experiments - not indexed, not in navigation */}
+            <Route path="/test-home" element={<TestHome />} />
             {/* Services page - conditionally available via feature flag */}
             {/* To re-enable: Set VITE_SERVICES_ENABLED=true in .env and restart */}
             <Route 
