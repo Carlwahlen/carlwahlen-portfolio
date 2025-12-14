@@ -11,6 +11,13 @@ const TestHome: React.FC = () => {
 
   return (
     <>
+      <style>{`
+        @media (max-width: 639px) {
+          .profile-image-responsive {
+            object-position: 50% 30% !important;
+          }
+        }
+      `}</style>
       <Helmet>
         <title>Test Home - Design Testing - Carl Wahlen</title>
         <meta name="description" content="Test page for design experiments - not indexed" />
