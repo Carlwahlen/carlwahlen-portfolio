@@ -14,7 +14,7 @@ const TestHome: React.FC = () => {
       <style>{`
         @media (min-width: 640px) and (max-width: 1023px) {
           .profile-image-responsive {
-            object-position: calc(50% + 20px) calc(25% + 70px) !important;
+            object-position: calc(50% + 20px) calc(25% + 65px) !important;
           }
         }
         @media (min-width: 1024px) {
