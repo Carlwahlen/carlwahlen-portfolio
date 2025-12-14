@@ -44,7 +44,7 @@ const TestHome: React.FC = () => {
                       style={{ 
                         objectPosition: 'calc(90% + 8px) 0%',
                         objectFit: 'cover',
-                        transform: 'scale(1.15)'
+                        transform: 'scale(1.3)'
                       }}
                       loading="eager"
                     />
