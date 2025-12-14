@@ -12,7 +12,12 @@ const TestHome: React.FC = () => {
   return (
     <>
       <style>{`
-        @media (min-width: 768px) {
+        @media (min-width: 640px) and (max-width: 1023px) {
+          .profile-image-responsive {
+            object-position: calc(50% + 20px) calc(25% + 70px) !important;
+          }
+        }
+        @media (min-width: 1024px) {
           .profile-image-responsive {
             object-position: calc(50% + 30px) calc(25% + 80px) !important;
           }
