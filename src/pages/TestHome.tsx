@@ -32,38 +32,55 @@ const TestHome: React.FC = () => {
             }}
           />
           <div className="container-custom relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              {/* Large title - similar to Samuel Oldmark's style */}
-              <h1 className="text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-6 leading-tight font-medium">
-                UX Designer<br />
-                with Product<br />
-                Focus
-              </h1>
-              
-              {/* Short description */}
-              <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto">
-                Build digital products by framing problems, mapping user journeys, and making clear MVP decisions.
-              </p>
-              
-              {/* Location */}
-              <p className="text-base text-gray-500 mb-10">
-                Stockholm, Sweden
-              </p>
-              
-              {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  to="/kontakt"
-                  className="btn-primary text-base px-8 py-3.5 rounded-full font-medium"
-                >
-                  Let's talk
-                </Link>
-                <Link
-                  to="/about"
-                  className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium"
-                >
-                  About me
-                </Link>
+            <div className="max-w-4xl mx-auto">
+              <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
+                {/* Profile Image - Circular, similar to Samuel Oldmark */}
+                <div className="flex-shrink-0">
+                  <div className="w-48 h-48 md:w-64 md:h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden bg-gray-200 border-4 border-gray-900 shadow-xl">
+                    <img
+                      src="/Portfolio_Pic.jpg"
+                      alt="Carl Wahlen"
+                      className="w-full h-full object-cover object-center grayscale"
+                      loading="eager"
+                    />
+                  </div>
+                </div>
+                
+                {/* Text Content */}
+                <div className="flex-1 text-center lg:text-left">
+                  {/* Large title - similar to Samuel Oldmark's style */}
+                  <h1 className="text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-6 leading-tight font-medium">
+                    UX Designer<br />
+                    with Product<br />
+                    Focus
+                  </h1>
+                  
+                  {/* Short description */}
+                  <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                    Build digital products by framing problems, mapping user journeys, and making clear MVP decisions.
+                  </p>
+                  
+                  {/* Location */}
+                  <p className="text-base text-gray-500 mb-10">
+                    Stockholm, Sweden
+                  </p>
+                  
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <Link
+                      to="/kontakt"
+                      className="btn-primary text-base px-8 py-3.5 rounded-full font-medium"
+                    >
+                      Let's talk
+                    </Link>
+                    <Link
+                      to="/about"
+                      className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium"
+                    >
+                      About me
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
