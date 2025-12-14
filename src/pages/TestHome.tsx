@@ -14,12 +14,12 @@ const TestHome: React.FC = () => {
       <style>{`
         @media (min-width: 640px) and (max-width: 1023px) {
           .profile-image-responsive {
-            object-position: calc(50% + 10px) top !important;
+            object-position: calc(50% + 10px) 25% !important;
           }
         }
         @media (min-width: 1024px) {
           .profile-image-responsive {
-            object-position: calc(50% + 10px) top !important;
+            object-position: calc(50% + 10px) 25% !important;
           }
         }
       `}</style>
@@ -54,7 +54,7 @@ const TestHome: React.FC = () => {
                       alt="Carl Wahlen"
                       className="w-full h-full object-cover grayscale profile-image-responsive"
                       style={{ 
-                        objectPosition: 'calc(50% + 10px) top',
+                        objectPosition: 'calc(50% + 10px) 25%',
                         objectFit: 'cover',
                         transform: 'scale(1.2)'
                       }}
