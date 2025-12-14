@@ -40,7 +40,8 @@ const TestHome: React.FC = () => {
                     <img
                       src="/Portfolio_Pic.jpg"
                       alt="Carl Wahlen"
-                      className="w-full h-full object-cover object-center grayscale"
+                      className="w-full h-full object-cover grayscale"
+                      style={{ objectPosition: 'center 25%', transform: 'scale(1.4)' }}
                       loading="eager"
                     />
                   </div>
