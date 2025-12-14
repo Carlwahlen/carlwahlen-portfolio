@@ -14,7 +14,8 @@ const TestHome: React.FC = () => {
       <style>{`
         @media (max-width: 639px) {
           .profile-image-responsive {
-            object-position: 50% 30% !important;
+            object-position: 50% 40% !important;
+            transform: scale(1.15) !important;
           }
         }
       `}</style>
