@@ -42,7 +42,7 @@ const TestHome: React.FC = () => {
                       alt="Carl Wahlen"
                       className="w-full h-full object-cover grayscale profile-image-responsive"
                       style={{ 
-                        objectPosition: 'calc(60% + 40px) 10%',
+                        objectPosition: 'calc(80% + 40px) 10%',
                         objectFit: 'cover'
                       }}
                       loading="eager"
