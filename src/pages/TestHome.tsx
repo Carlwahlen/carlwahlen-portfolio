@@ -63,13 +63,13 @@ const TestHome: React.FC = () => {
                   {/* Short description */}
                   <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                     <span className="md:inline block">
-                      Build digital products by framing problems,
+                      Build digital products by framing problems and
                     </span>{' '}
                     <span className="md:inline block">
-                      mapping user journeys,
+                      mapping user journeys, and making
                     </span>{' '}
                     <span className="md:inline block">
-                      and making clear MVP decisions.
+                      clear MVP decisions.
                     </span>
                   </p>
                   
