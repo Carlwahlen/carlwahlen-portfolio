@@ -215,7 +215,7 @@ const AINavigationCasePage: React.FC = () => {
 
               {/* Flow-Based Guidance - Screenshot left, Text right */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div className="lg:order-1">
+                <div className="order-2 lg:order-1">
                   <img
                     src="/Ai_nav_pic2.png"
                     alt="Flow-based guidance interface"
@@ -223,7 +223,7 @@ const AINavigationCasePage: React.FC = () => {
                     loading="lazy"
                   />
                 </div>
-                <div className="lg:order-2 max-w-[680px]">
+                <div className="order-1 lg:order-2 max-w-[680px]">
                   <h3 className="text-2xl text-gray-900 mb-4 font-medium">
                     Flow-Based Guidance
                   </h3>
