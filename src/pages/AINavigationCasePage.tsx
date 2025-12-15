@@ -260,7 +260,7 @@ const AINavigationCasePage: React.FC = () => {
         <div className="border-t border-gray-200"></div>
 
         {/* 4.5) SYSTEM BLUEPRINT */}
-        <section className="py-32 lg:py-40 bg-gray-50">
+        <section className="py-32 lg:py-40 bg-white">
           <div className="container-custom" style={{ maxWidth: '1440px' }}>
             <div className="max-w-[680px] mx-auto mb-16 text-center">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
