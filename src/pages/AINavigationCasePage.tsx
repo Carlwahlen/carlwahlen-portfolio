@@ -261,7 +261,7 @@ const AINavigationCasePage: React.FC = () => {
 
         {/* 4.5) SYSTEM BLUEPRINT - After screenshots */}
         <section className="py-32 lg:py-40 bg-white">
-          <div className="container-custom" style={{ maxWidth: '1440px' }}>
+          <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px] mx-auto mb-16 text-center">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 AI Navigation as a System Layer
@@ -271,7 +271,7 @@ const AINavigationCasePage: React.FC = () => {
               </p>
             </div>
             
-            {/* Diagram container - fully responsive, scales with screen */}
+            {/* Diagram container - matches content width */}
             <div className="w-full">
               <div className="text-center mb-6">
                 <span className="text-sm text-gray-500 font-normal">
@@ -282,7 +282,7 @@ const AINavigationCasePage: React.FC = () => {
                 <img
                   src="/AI_Navigation_as_a_System_Layer.svg"
                   alt="AI Navigation System Layer blueprint showing intent detection, routing, authentication, and feedback flows"
-                  className="w-full h-auto max-w-full"
+                  className="w-full h-auto"
                   loading="lazy"
                 />
               </div>
