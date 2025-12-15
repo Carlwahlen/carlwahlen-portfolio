@@ -271,14 +271,14 @@ const AINavigationCasePage: React.FC = () => {
               </p>
             </div>
             
-            {/* Diagram container - matches content width */}
-            <div className="w-full">
+            {/* Diagram container - matches text content width */}
+            <div className="max-w-[680px] mx-auto">
               <div className="text-center mb-6">
                 <span className="text-sm text-gray-500 font-normal">
                   System-level blueprint (conceptual)
                 </span>
               </div>
-              <div className="w-full flex justify-center">
+              <div className="w-full">
                 <img
                   src="/AI_Navigation_as_a_System_Layer.svg"
                   alt="AI Navigation System Layer blueprint showing intent detection, routing, authentication, and feedback flows"
