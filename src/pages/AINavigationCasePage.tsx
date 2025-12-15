@@ -259,6 +259,47 @@ const AINavigationCasePage: React.FC = () => {
         {/* Divider */}
         <div className="border-t border-gray-200"></div>
 
+        {/* 4.5) SYSTEM BLUEPRINT */}
+        <section className="py-32 lg:py-40 bg-gray-50">
+          <div className="container-custom" style={{ maxWidth: '1440px' }}>
+            <div className="max-w-[680px] mx-auto mb-16 text-center">
+              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+                AI Navigation as a System Layer
+              </h2>
+              <p className="text-lg text-gray-600 leading-relaxed font-normal">
+                This conceptual system overview illustrates how intent detection, intelligent routing, authentication handling, and user feedback work together to create a seamless navigation experience.
+              </p>
+            </div>
+            
+            {/* Diagram container - immersive full-width on desktop, scrollable on mobile */}
+            <div className="w-full">
+              <div className="text-center mb-6">
+                <span className="text-sm text-gray-500 font-normal">
+                  System-level blueprint (conceptual)
+                </span>
+              </div>
+              <div className="w-full overflow-x-auto px-4 sm:px-0">
+                <div className="flex justify-center min-w-max sm:min-w-0">
+                  <img
+                    src="/AI_Navigation_as_a_System_Layer.svg"
+                    alt="AI Navigation System Layer blueprint showing intent detection, routing, authentication, and feedback flows"
+                    className="h-auto"
+                    style={{ 
+                      minWidth: '800px',
+                      maxWidth: '100%',
+                      width: 'auto'
+                    }}
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Divider */}
+        <div className="border-t border-gray-200"></div>
+
         {/* 5) CAPABILITIES / WHAT THIS ENABLES */}
         <section className="py-24 lg:py-32">
           <div className="container-custom">
