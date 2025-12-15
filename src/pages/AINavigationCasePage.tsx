@@ -296,182 +296,153 @@ const AINavigationCasePage: React.FC = () => {
         {/* Divider */}
         <div className="border-t border-gray-200"></div>
 
-        {/* 5) CAPABILITIES / WHAT THIS ENABLES */}
+        {/* 5) IMPACT & DESIGN RATIONALE */}
         <section className="py-24 lg:py-32">
           <div className="container-custom">
-            <div className="max-w-[680px] mx-auto mb-16 text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
-                What This Solution Enables
+            <div className="max-w-[680px] mx-auto mb-12 text-center">
+              <h2 className="text-3xl text-gray-900 mb-4 font-medium">
+                Impact & Design Rationale
               </h2>
-                  </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" style={{ gap: '24px' }}>
-              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
-                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+              <p className="text-base text-gray-600 leading-relaxed font-normal">
+                This section summarizes the value of the solution, the approach behind it, and the user insights that informed key decisions.
+              </p>
+            </div>
+
+            {/* TOP ROW - Impact (compact cards) */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '16px 20px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-3">Reduced navigation friction</h3>
-                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                <h3 className="text-base font-medium text-gray-900 mb-2">Reduced navigation friction</h3>
+                <ul className="space-y-1 text-gray-600 text-sm font-normal">
                   <li>• Faster information discovery</li>
                   <li>• No need to learn site structure</li>
                   <li>• Lower cognitive load</li>
                 </ul>
-                </div>
+              </div>
 
-              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
-                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '16px 20px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
-                  </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-3">Improved task completion</h3>
-                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                </div>
+                <h3 className="text-base font-medium text-gray-900 mb-2">Improved task completion</h3>
+                <ul className="space-y-1 text-gray-600 text-sm font-normal">
                   <li>• Higher success rates</li>
                   <li>• Intent correctly interpreted</li>
                   <li>• Guided step-by-step flows</li>
                 </ul>
-                  </div>
+              </div>
               
-              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
-                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '16px 20px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-3">Scalable architecture</h3>
-                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                <h3 className="text-base font-medium text-gray-900 mb-2">Scalable architecture</h3>
+                <ul className="space-y-1 text-gray-600 text-sm font-normal">
                   <li>• Self-hosted system</li>
                   <li>• API integrations</li>
                   <li>• Extensible content types</li>
                 </ul>
-                </div>
+              </div>
 
-              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
-                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
+              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '16px 20px' }}>
+                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-3">
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-3">Consistent UX</h3>
-                <ul className="space-y-2 text-gray-600 text-sm font-normal">
+                <h3 className="text-base font-medium text-gray-900 mb-2">Consistent UX</h3>
+                <ul className="space-y-1 text-gray-600 text-sm font-normal">
                   <li>• Unified navigation experience</li>
                   <li>• Works across platforms</li>
                   <li>• Accessible design patterns</li>
                 </ul>
               </div>
             </div>
-                  </div>
-        </section>
 
-        {/* Divider */}
-        <div className="border-t border-gray-200"></div>
-
-        {/* 6) PROCESS - HOW I APPROACHED */}
-        <section className="py-24 lg:py-32">
-          <div className="container-custom" style={{ maxWidth: '1180px' }}>
-            <div className="max-w-[680px] mx-auto mb-16 text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
-                How I Approached the Problem
-              </h2>
+            {/* MIDDLE ROW - Approach (horizontal, lightweight) */}
+            <div className="max-w-[680px] mx-auto mb-16">
+              <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8">
+                <div className="flex items-start gap-3 flex-1">
+                  <div className="flex-shrink-0 w-5 h-5 text-gray-900 mt-0.5">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 105.65 5.65a7.5 7.5 0 0010.99 10.99z" />
+                    </svg>
                   </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8" style={{ gap: '24px' }}>
-              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
-                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 105.65 5.65a7.5 7.5 0 0010.99 10.99z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-3">Research</h3>
-                <ul className="space-y-2 text-gray-600 text-sm font-normal">
-                  <li>• User behavior analysis on complex websites</li>
-                  <li>• Intent detection patterns and challenges</li>
-                </ul>
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-900 mb-1">Research</h3>
+                    <p className="text-sm text-gray-600 font-normal">User behavior analysis and intent detection pattern research</p>
+                  </div>
                 </div>
 
-              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
-                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.757.426 1.757 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.757-2.924 1.757-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.757-.426-1.757-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.607 2.296.07 2.572-1.065z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
+                <div className="flex items-start gap-3 flex-1">
+                  <div className="flex-shrink-0 w-5 h-5 text-gray-900 mt-0.5">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.757.426 1.757 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.757-2.924 1.757-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.757-.426-1.757-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.607 2.296.07 2.572-1.065z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
                   </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-3">Architecture</h3>
-                <ul className="space-y-2 text-gray-600 text-sm font-normal">
-                  <li>• System design for intent-based navigation</li>
-                  <li>• LLM integration and content indexing</li>
-                </ul>
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-900 mb-1">Architecture</h3>
+                    <p className="text-sm text-gray-600 font-normal">System design for intent-based navigation with LLM integration</p>
                   </div>
-
-              <div className="bg-white rounded-xl border" style={{ borderColor: 'rgba(0,0,0,0.08)', padding: '24px 32px' }}>
-                <div className="flex-shrink-0 w-6 h-6 text-gray-900 mb-4">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-                  </svg>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-3">Prototyping</h3>
-                <ul className="space-y-2 text-gray-600 text-sm font-normal">
-                  <li>• Prototype development and user testing</li>
-                  <li>• Iterative flow refinement based on feedback</li>
-                </ul>
+
+                <div className="flex items-start gap-3 flex-1">
+                  <div className="flex-shrink-0 w-5 h-5 text-gray-900 mt-0.5">
+                    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="2">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-medium text-gray-900 mb-1">Prototyping</h3>
+                    <p className="text-sm text-gray-600 font-normal">Prototype development with iterative flow refinement</p>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </section>
 
-        {/* Divider */}
-        <div className="border-t border-gray-200"></div>
-
-        {/* 7) INSIGHTS / MARKET DATA */}
-        <section className="py-24 lg:py-32">
-          <div className="container-custom">
+            {/* BOTTOM ROW - User Insights (condensed) */}
             <div className="max-w-[680px] mx-auto">
-              <h2 className="text-3xl text-gray-900 mb-6 text-left font-medium">
+              <h3 className="text-xl text-gray-900 mb-4 text-left font-medium">
                 User Insights
-              </h2>
-              <p className="text-lg text-gray-600 mb-10 text-left font-normal">
-                Research findings on user behavior and navigation patterns on complex websites
-              </p>
+              </h3>
               
-              {/* Scannable bullets */}
-              <ul className="space-y-4">
+              <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <p className="text-lg text-gray-700 font-normal">Users search based on goals, not menu labels</p>
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <p className="text-base text-gray-700 font-normal">Users search based on goals and natural language, not menu labels or internal terminology</p>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <p className="text-lg text-gray-700 font-normal">Users type natural language, not internal terms</p>
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <p className="text-base text-gray-700 font-normal">Users expect conversational interfaces that understand intent, not hierarchical navigation systems</p>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <p className="text-lg text-gray-700 font-normal">Users expect results to understand intent</p>
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <p className="text-base text-gray-700 font-normal">Task completion rates significantly increase when systems interpret user intent rather than requiring exact keyword matches</p>
                 </li>
                 <li className="flex items-start">
-                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <p className="text-lg text-gray-700 font-normal">Users refine queries like chat, not filter trees</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <p className="text-lg text-gray-700 font-normal">Users respond to suggestions faster than dropdowns</p>
-                </li>
-                <li className="flex items-start">
-                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                  <p className="text-lg text-gray-700 font-normal">Success rate increases when intent is interpreted</p>
+                  <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                  <p className="text-base text-gray-700 font-normal">Users respond faster to AI-powered suggestions than traditional dropdown menus and filter trees</p>
                 </li>
               </ul>
               
               {/* Optional toggle */}
-              <details className="mt-12 pt-8 border-t border-gray-200">
+              <details className="mt-8 pt-6 border-t border-gray-200">
                 <summary 
-                  className="cursor-pointer text-base text-gray-900 font-medium hover:text-gray-700 transition-colors"
+                  className="cursor-pointer text-sm text-gray-900 font-medium hover:text-gray-700 transition-colors"
                   onClick={() => setResearchExpanded(!researchExpanded)}
                 >
                   View detailed research notes
                   <svg 
-                    className={`inline-block ml-2 w-5 h-5 transform transition-transform ${researchExpanded ? 'rotate-180' : ''}`}
+                    className={`inline-block ml-2 w-4 h-4 transform transition-transform ${researchExpanded ? 'rotate-180' : ''}`}
                     fill="none" 
                     stroke="currentColor" 
                     viewBox="0 0 24 24"
@@ -479,7 +450,7 @@ const AINavigationCasePage: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </summary>
-                <div className="mt-6 space-y-4 text-gray-600 font-normal">
+                <div className="mt-4 space-y-3 text-sm text-gray-600 font-normal">
                   <p>
                     Research was conducted through user interviews, analytics analysis, and usability testing on complex government and financial websites. The findings reveal consistent patterns in how users approach information architecture challenges.
                   </p>
