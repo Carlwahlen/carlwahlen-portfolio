@@ -89,7 +89,7 @@ const AINavigationCasePage: React.FC = () => {
 
         {/* 2) WHY AI NAVIGATION MATTERS */}
         <section className="py-24 lg:py-32">
-          <div className="container-custom" style={{ maxWidth: '1180px' }}>
+          <div className="container-custom">
             <div className="max-w-[680px] mx-auto">
               <h2 className="text-3xl text-gray-900 mb-6 text-LEFT font-medium">
                 Why AI Navigation Matters
