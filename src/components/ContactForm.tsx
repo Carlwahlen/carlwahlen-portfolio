@@ -3,28 +3,18 @@ import emailjs from '@emailjs/browser';
 import { analyticsEvents } from '../utils/analytics';
 
 interface FormData {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
-  company: string;
-  subject: string;
-  website: string;
   message: string;
-  interests: string[];
-  services: string[];
-  discussProjects: boolean;
 }
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: '',
+    firstName: '',
+    lastName: '',
     email: '',
-    company: '',
-    subject: '',
-    website: '',
-    message: '',
-    interests: [],
-    services: [],
-    discussProjects: false
+    message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -35,44 +25,11 @@ const ContactForm: React.FC = () => {
     analyticsEvents.contactFormStart();
   }, []);
 
-  const interestOptions = [
-    'Discovery call',
-    'Proposal',
-    'Demo'
-  ];
-
-  const serviceOptions = [
-    'Product Strategy Consulting',
-    'UX/UI Design',
-    'Strategic Business Development',
-    'Technology Strategy',
-    'Data-Driven Product Development',
-    'Process & Methodology'
-  ];
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
-    }));
-  };
-
-  const handleInterestChange = (interest: string) => {
-    setFormData(prev => ({
-      ...prev,
-      interests: prev.interests.includes(interest)
-        ? prev.interests.filter(i => i !== interest)
-        : [...prev.interests, interest]
-    }));
-  };
-
-  const handleServiceChange = (service: string) => {
-    setFormData(prev => ({
-      ...prev,
-      services: prev.services.includes(service)
-        ? prev.services.filter(s => s !== service)
-        : [...prev.services, service]
     }));
   };
 
@@ -96,18 +53,10 @@ const ContactForm: React.FC = () => {
 
       // Prepare email template parameters
       const templateParams = {
-        from_name: formData.name,
+        from_name: `${formData.firstName} ${formData.lastName}`.trim(),
+        first_name: formData.firstName,
+        last_name: formData.lastName,
         from_email: formData.email,
-        company: formData.company || 'Not provided',
-        subject: formData.subject || 'No subject',
-        website: formData.website || 'Not provided',
-        interests: formData.interests.length > 0 
-          ? formData.interests.join(', ') 
-          : 'None selected',
-        services: formData.services.length > 0 
-          ? formData.services.join(', ') 
-          : 'None selected',
-        discuss_projects: formData.discussProjects ? 'Yes' : 'No',
         message: formData.message,
         to_name: 'Carl Wahlen',
       };
@@ -178,133 +127,52 @@ const ContactForm: React.FC = () => {
     <form onSubmit={handleSubmit} className="card p-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div>
-          <label htmlFor="name" className="form-label">
-            Name *
+          <label htmlFor="firstName" className="form-label">
+            First Name *
           </label>
           <input
             type="text"
-            id="name"
-            name="name"
-            value={formData.name}
+            id="firstName"
+            name="firstName"
+            value={formData.firstName}
             onChange={handleInputChange}
             required
             className="form-input"
-            placeholder="Your name"
+            placeholder="First name"
           />
         </div>
         
         <div>
-          <label htmlFor="email" className="form-label">
-            Email *
+          <label htmlFor="lastName" className="form-label">
+            Last Name *
           </label>
           <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
+            type="text"
+            id="lastName"
+            name="lastName"
+            value={formData.lastName}
             onChange={handleInputChange}
             required
             className="form-input"
-            placeholder="your@email.com"
+            placeholder="Last name"
           />
         </div>
       </div>
       
       <div className="mb-6">
-        <label htmlFor="company" className="form-label">
-          Company
+        <label htmlFor="email" className="form-label">
+          Email *
         </label>
         <input
-          type="text"
-          id="company"
-          name="company"
-          value={formData.company}
+          type="email"
+          id="email"
+          name="email"
+          value={formData.email}
           onChange={handleInputChange}
+          required
           className="form-input"
-          placeholder="Company name"
+          placeholder="your@email.com"
         />
-      </div>
-
-      <div className="mb-6">
-        <label htmlFor="subject" className="form-label">
-          Subject (optional)
-        </label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          value={formData.subject}
-          onChange={handleInputChange}
-          className="form-input"
-          placeholder="What is this regarding?"
-        />
-      </div>
-
-      <div className="mb-6">
-        <label htmlFor="website" className="form-label">
-          Website URL (optional)
-        </label>
-        <input
-          type="url"
-          id="website"
-          name="website"
-          value={formData.website}
-          onChange={handleInputChange}
-          className="form-input"
-          placeholder="https://yourwebsite.com"
-        />
-      </div>
-      
-      <div className="mb-6">
-        <label className="form-label">
-          What are you interested in?
-        </label>
-        <div className="space-y-2">
-          {interestOptions.map((option) => (
-            <label key={option} className="flex items-center">
-              <input
-                type="checkbox"
-                checked={formData.interests.includes(option)}
-                onChange={() => handleInterestChange(option)}
-                className="w-4 h-4 text-gray-900 bg-white border-gray-300 rounded focus:ring-gray-900 focus:ring-2"
-              />
-              <span className="ml-3 text-sm text-gray-700">{option}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      <div className="mb-6">
-        <label className="form-label">
-          Which services are you interested in? (optional)
-        </label>
-        <div className="space-y-2">
-          {serviceOptions.map((service) => (
-            <label key={service} className="flex items-center">
-              <input
-                type="checkbox"
-                checked={formData.services.includes(service)}
-                onChange={() => handleServiceChange(service)}
-                className="w-4 h-4 text-gray-900 bg-white border-gray-300 rounded focus:ring-gray-900 focus:ring-2"
-              />
-              <span className="ml-3 text-sm text-gray-700">{service}</span>
-            </label>
-          ))}
-        </div>
-      </div>
-
-      <div className="mb-6">
-        <label className="flex items-center">
-          <input
-            type="checkbox"
-            checked={formData.discussProjects}
-            onChange={(e) => setFormData(prev => ({ ...prev, discussProjects: e.target.checked }))}
-            className="w-4 h-4 text-gray-900 bg-white border-gray-300 rounded focus:ring-gray-900 focus:ring-2"
-          />
-          <span className="ml-3 text-sm text-gray-700">
-            Interested in discussing one of my existing projects? (optional)
-          </span>
-        </label>
       </div>
       
       <div className="mb-6">

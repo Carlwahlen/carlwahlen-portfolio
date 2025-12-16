@@ -90,7 +90,7 @@ const Header: React.FC = () => {
               </div>
               
               <Link
-                to="/kontakt"
+                to="/contact"
                 className="btn-primary text-sm"
               >
                 Let's talk
@@ -156,7 +156,7 @@ const Header: React.FC = () => {
                 </div>
                 
                 <Link
-                  to="/kontakt"
+                  to="/contact"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="btn-primary text-base w-full text-center py-3 mt-4"
                 >

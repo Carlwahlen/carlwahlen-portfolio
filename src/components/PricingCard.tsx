@@ -40,7 +40,7 @@ const PricingCard: React.FC<PricingCardProps> = ({ pricing, featured = false }) 
       </ul>
       
       <Link
-        to="/kontakt"
+        to="/contact"
         className={`w-full text-center py-3 px-4 rounded-xl font-medium transition-all duration-200 ${
           featured 
             ? 'btn-primary' 

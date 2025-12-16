@@ -127,7 +127,7 @@ const App: React.FC = () => {
             <Route path="/knowledge/:areaSlug/:pageSlug" element={<KnowledgeArticlePage />} />
             {/* Redirect old Swedish URLs to English */}
             <Route path="/om" element={<About />} />
-            <Route path="/kontakt" element={<Contact />} />
+            <Route path="/kontakt" element={<Navigate to="/contact" replace />} />
             <Route path="/notes" element={<Notes />} />
           </Routes>
           

@@ -81,7 +81,7 @@ const TestHome: React.FC = () => {
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                     <Link
-                      to="/kontakt"
+                      to="/contact"
                       className="btn-primary text-base px-8 py-3.5 rounded-full font-medium"
                     >
                       Let's talk
