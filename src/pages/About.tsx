@@ -238,9 +238,9 @@ const About: React.FC = () => {
           
           <div className="container-hero relative z-10">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-16 lg:gap-24">
-              {/* Column 1 - Expertise Areas */}
+              {/* Column 1 - Areas I work with */}
                 <div>
-                <h3 className="text-xl text-gray-900 mb-4">Expertise Areas</h3>
+                <h3 className="text-xl text-gray-900 mb-4">Areas I work with</h3>
                 <div className="space-y-5">
                   <div className="flex items-center">
                     <div className="w-1 h-6 bg-gray-900 mr-4 flex-shrink-0"></div>
