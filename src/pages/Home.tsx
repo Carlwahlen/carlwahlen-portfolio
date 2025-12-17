@@ -14,13 +14,13 @@ const Home: React.FC = () => {
     <>
       <Helmet>
         <title>Carl Wahlen - UX Designer with Product Focus</title>
-        <meta name="description" content="Product strategy consultant in Sweden specializing in data-driven products, UX/UI design, business development, and technology strategy. Experience in developing scalable products that unite strategy, technology, and design for enhanced business value." />
+        <meta name="description" content="UX Designer with Product Focus based in Stockholm, Sweden. Build digital products by framing problems, mapping user journeys, and making clear MVP decisions." />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://carlwahlen.com/" />
         <meta property="og:title" content="Carl Wahlen - UX Designer with Product Focus" />
-        <meta property="og:description" content="Product strategy consultant in Sweden specializing in data-driven products, UX/UI design, business development, and technology strategy. Experience in developing scalable products that unite strategy, technology, and design for enhanced business value." />
+        <meta property="og:description" content="UX Designer with Product Focus based in Stockholm, Sweden. Build digital products by framing problems, mapping user journeys, and making clear MVP decisions." />
         <meta property="og:image" content="https://carlwahlen.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://carlwahlen.com/" />
         <meta property="twitter:title" content="Carl Wahlen - UX Designer with Product Focus" />
-        <meta property="twitter:description" content="Product strategy consultant in Sweden specializing in data-driven products, UX/UI design, business development, and technology strategy. Experience in developing scalable products that unite strategy, technology, and design for enhanced business value." />
+        <meta property="twitter:description" content="UX Designer with Product Focus based in Stockholm, Sweden. Build digital products by framing problems, mapping user journeys, and making clear MVP decisions." />
         <meta property="twitter:image" content="https://carlwahlen.com/og-image.jpg" />
 
         {/* Additional SEO */}
