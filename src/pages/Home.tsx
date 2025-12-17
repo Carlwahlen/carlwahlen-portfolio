@@ -204,47 +204,6 @@ const Home: React.FC = () => {
           </div>
         </section>
 
-      {/* Your Product Partner Section */}
-      <section className="py-16 lg:py-24 bg-white">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-10 items-center">
-            {/* Left Side - Logo */}
-            <div className="flex justify-center lg:justify-end items-center order-1 pr-0 lg:pr-32 mb-10 lg:mb-0">
-              <img 
-                src="/logo.svg" 
-                alt="Carl Wahlén Logo" 
-                className="h-80 w-80 md:h-56 md:w-56 lg:h-64 lg:w-64 opacity-100"
-              />
-            </div>
-
-            {/* Right Side - Text Content */}
-            <div className="text-left order-2 flex flex-col justify-center">
-              <h2 className="text-3xl md:text-4xl text-gray-900 mb-4">
-                Your Product Partner
-              </h2>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                I'm a technical product strategist based in Stockholm, helping companies build data-driven digital products where strategy, technology and design work together to create measurable business value.
-              </p>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                I work with early product ideas and turn them into clear concepts, user flows and interfaces that can be tested with real people. My focus is to reduce uncertainty, create alignment and ensure that teams build things that are useful, understandable and scalable.
-              </p>
-              <p className="text-base text-gray-600 leading-relaxed mb-6">
-                I help organisations move from idea to working prototype through research, structured decision-making and close collaboration between design, product and technology.
-              </p>
-              {servicesEnabled && (
-              <Link 
-                to="/services" 
-                className="btn-secondary inline-flex items-center justify-center text-base self-start"
-              >
-                Services
-              </Link>
-              )}
-            </div>
-          </div>
-        </div>
-      </section>
-
-
       {/* Navigation & Contact Section */}
       <section className="py-16 bg-gray-50 relative overflow-hidden">
         {/* Tile pattern background - perfectly structured grid with diamonds at intersections */}
