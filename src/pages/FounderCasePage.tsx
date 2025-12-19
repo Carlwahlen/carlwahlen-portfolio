@@ -729,63 +729,7 @@ const FounderCasePage: React.FC = () => {
         {/* Divider */}
         <div className="border-t border-gray-200"></div>
 
-        {/* 8) TECHNICAL STACK */}
-        <section className="py-16 lg:py-20">
-          <div className="container-custom" style={{ maxWidth: '1180px' }}>
-            <div className="max-w-[680px] mx-auto mb-12 text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
-                Technical Stack
-              </h2>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-lg border border-gray-300 flex items-center justify-center text-gray-900">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">Backend</h3>
-                <p className="text-sm text-gray-600 font-normal">Node.js, Microservices, AWS Lambda</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-lg border border-gray-300 flex items-center justify-center text-gray-900">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">Database</h3>
-                <p className="text-sm text-gray-600 font-normal">PostgreSQL, Redis, DynamoDB</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-lg border border-gray-300 flex items-center justify-center text-gray-900">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">Frontend</h3>
-                <p className="text-sm text-gray-600 font-normal">React, TypeScript, GraphQL</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 rounded-lg border border-gray-300 flex items-center justify-center text-gray-900">
-                  <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                  </svg>
-                </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-2">Security</h3>
-                <p className="text-sm text-gray-600 font-normal">OAuth 2.0, PCI DSS Compliance</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Divider */}
-        <div className="border-t border-gray-200"></div>
-
-        {/* 9) CLOSING + CTA */}
+        {/* 8) CLOSING + CTA */}
         <section className="py-20 lg:py-28">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-3xl mx-auto text-center">
