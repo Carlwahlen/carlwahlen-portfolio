@@ -3,91 +3,85 @@
   <!-- Main pages -->
   <url>
     <loc>https://carlwahlen.com/</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/about</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/contact</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/faq</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://carlwahlen.com/services</loc>
-    <lastmod>2025-12-09</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://carlwahlen.com/case</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/knowledge</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/case/payment-orchestration</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/case/hellman-partners</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/case/style-scandinavia</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/case/portfolio-website</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/case/ai-navigation</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/knowledge/product-strategy/what-is-product-strategy</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/knowledge/ux-design/ux-vs-ui</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://carlwahlen.com/knowledge/data-driven-product-development/kpi-north-star-metrics</loc>
-    <lastmod>2025-12-09</lastmod>
+    <lastmod>2025-12-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
