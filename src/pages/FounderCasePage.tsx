@@ -154,15 +154,14 @@ const FounderCasePage: React.FC = () => {
               {/* Small diagram row */}
               <div className="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-12 pt-8 border-t border-gray-200">
                 <div className="flex-1">
-                  <h3 className="text-xl text-gray-900 mb-6 text-left font-medium">PSP</h3>
+                  <h3 className="text-xl text-gray-900 mb-6 text-left font-medium">PSP Routing</h3>
                   <div className="text-center">
                     <img
                       src="/psp_flow.svg"
                       alt="Traditional single PSP flow"
-                      className="w-full mb-3"
+                      className="w-full"
                       loading="lazy"
                     />
-                    <p className="text-sm text-gray-600">Current routing</p>
                   </div>
                 </div>
                 
@@ -173,15 +172,14 @@ const FounderCasePage: React.FC = () => {
                 </div>
                 
                 <div className="flex-1">
-                  <h3 className="text-xl text-gray-900 mb-6 text-left font-medium">Payment Orchestration</h3>
+                  <h3 className="text-xl text-gray-900 mb-6 text-left font-medium">Payment Orchestration Routing</h3>
                   <div className="text-center">
                     <img
                       src="/paymenOrchestration_flow.svg"
                       alt="Payment orchestration flow with multiple PSPs"
-                      className="w-full mb-3"
+                      className="w-full"
                       loading="lazy"
                     />
-                    <p className="text-sm text-gray-600">Orchestrated routing</p>
                   </div>
                 </div>
               </div>
