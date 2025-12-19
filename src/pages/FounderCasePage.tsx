@@ -44,10 +44,10 @@ const FounderCasePage: React.FC = () => {
                 UI Prototype + Market Research
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-tight">
+              <h1 className="text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-[56px] lg:leading-[64px]">
                 Payment Orchestration Architecture<br />& Market Study
                 </h1>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8 font-normal max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 leading-7 mb-8 font-normal max-w-2xl mx-auto">
                 Exploring how multi-PSP routing, unified APIs and data-driven orchestration could enable more flexible and resilient payments.
               </p>
               
@@ -102,7 +102,7 @@ const FounderCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Single PSP dependency creates risk when providers experience downtime</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Single PSP dependency creates risk when providers experience downtime</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -111,7 +111,7 @@ const FounderCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Hard rejections instead of intelligent retry and failover strategies</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Hard rejections instead of intelligent retry and failover strategies</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -120,7 +120,7 @@ const FounderCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Fragmented data across providers makes optimization difficult</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Fragmented data across providers makes optimization difficult</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -129,7 +129,7 @@ const FounderCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">No flexibility to optimize routing based on performance or cost</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">No flexibility to optimize routing based on performance or cost</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -138,7 +138,7 @@ const FounderCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Adding or switching PSPs requires complex new integrations</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Adding or switching PSPs requires complex new integrations</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -147,17 +147,17 @@ const FounderCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Limited visibility into payment performance across providers</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Limited visibility into payment performance across providers</p>
                 </div>
               </div>
 
               {/* Small diagram row */}
               <div className="flex flex-col md:flex-row items-start justify-center gap-8 md:gap-12 pt-8 border-t border-gray-200">
                 <div className="flex-1">
-                  <h3 className="text-xl text-gray-900 mb-6 text-left font-medium">PSP Routing</h3>
+                  <h3 className="text-xl text-gray-900 mb-6 leading-7 text-left font-medium">PSP Routing</h3>
                   <div className="text-center">
-                    <img
-                      src="/psp_flow.svg"
+                <img
+                  src="/psp_flow.svg"
                       alt="Traditional single PSP flow"
                       className="w-full"
                       loading="lazy"
@@ -172,7 +172,7 @@ const FounderCasePage: React.FC = () => {
                 </div>
                 
                 <div className="flex-1">
-                  <h3 className="text-xl text-gray-900 mb-6 text-left font-medium">Payment Orchestration Routing</h3>
+                  <h3 className="text-xl text-gray-900 mb-6 leading-7 text-left font-medium">Payment Orchestration Routing</h3>
                   <div className="text-center">
                     <img
                       src="/paymenOrchestration_flow.svg"
@@ -196,10 +196,10 @@ const FounderCasePage: React.FC = () => {
             {/* My Orchestration Concept - Text above, Large screenshot below */}
             <div className="mb-20">
               <div className="max-w-[680px] mb-12">
-                <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+                <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                   My Orchestration Concept
                 </h2>
-                <p className="text-lg text-gray-600 leading-relaxed font-normal">
+                <p className="text-base text-gray-600 leading-6 font-normal">
                   For this project, I conceptualized and designed a payment orchestration system that starts with rule-based routing for immediate control, while building toward signal-based logic and future AI-assisted decisioning. The goal is to provide merchants with flexible, resilient payment infrastructure that adapts as transaction data accumulates.
                 </p>
               </div>
@@ -218,7 +218,7 @@ const FounderCasePage: React.FC = () => {
               {/* Centralized visibility - Text left, Screenshot right */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="max-w-[680px]">
-                  <h3 className="text-2xl text-gray-900 mb-4 font-medium">
+                  <h3 className="text-xl text-gray-900 mb-4 leading-7 font-medium">
                     Centralized visibility
                   </h3>
                   <p className="text-gray-700 mb-4 font-normal">
@@ -246,7 +246,7 @@ const FounderCasePage: React.FC = () => {
                   />
                 </div>
                 <div className="lg:order-2 max-w-[680px]">
-                  <h3 className="text-2xl text-gray-900 mb-4 font-medium">
+                  <h3 className="text-xl text-gray-900 mb-4 leading-7 font-medium">
                     Multi-provider management
                   </h3>
                   <p className="text-gray-700 mb-4 font-normal">
@@ -258,7 +258,7 @@ const FounderCasePage: React.FC = () => {
               {/* Visual routing configuration - Text left, Screenshot right */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="max-w-[680px]">
-                  <h3 className="text-2xl text-gray-900 mb-4 font-medium">
+                  <h3 className="text-xl text-gray-900 mb-4 leading-7 font-medium">
                     Visual routing configuration
                   </h3>
                   <p className="text-gray-700 mb-4 font-normal">
@@ -355,18 +355,18 @@ const FounderCasePage: React.FC = () => {
         <section className="py-16 lg:py-20">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px] mx-auto mb-12 text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 How I Approached the Problem
               </h2>
             </div>
             
             <div>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div className="text-center">
+              <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-gray-300 flex items-center justify-center font-semibold text-xl text-gray-900">
                     1
                   </div>
-                  <h3 className="text-xl text-gray-900 mb-3 font-medium">Research</h3>
+                  <h3 className="text-xl text-gray-900 mb-3 leading-7 font-medium">Research</h3>
                   <p className="text-gray-700 text-sm font-normal max-w-xs mx-auto">
                     Mapped the orchestration landscape, analyzed market models, and identified key pain points and opportunities.
                   </p>
@@ -380,9 +380,9 @@ const FounderCasePage: React.FC = () => {
                   <p className="text-gray-700 text-sm font-normal max-w-xs mx-auto">
                     Designed system architecture prioritizing rule-based routing first, with scalability toward signal-based logic.
                   </p>
-                </div>
-
-                <div className="text-center">
+              </div>
+              
+              <div className="text-center">
                   <div className="w-16 h-16 mx-auto mb-6 rounded-full border border-gray-300 flex items-center justify-center font-semibold text-xl text-gray-900">
                     3
                   </div>
@@ -403,10 +403,10 @@ const FounderCasePage: React.FC = () => {
         <section className="py-16 lg:py-20 bg-gray-50">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div>
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 Market Landscape Insights
               </h2>
-              <p className="text-lg text-gray-600 mb-10 font-normal">
+              <p className="text-base text-gray-600 mb-10 leading-6 font-normal">
                 To understand how orchestration works in practice, I mapped the current market and compared three common architectural approaches.
               </p>
 
@@ -449,8 +449,8 @@ const FounderCasePage: React.FC = () => {
                   </table>
                 </div>
               </div>
-
-              <p className="text-lg text-gray-600 mb-8 font-normal">
+              
+              <p className="text-base text-gray-600 mb-8 leading-6 font-normal">
                 Each orchestration model represents a different balance between control, adaptability, and operational complexity.
               </p>
 
@@ -474,7 +474,7 @@ const FounderCasePage: React.FC = () => {
                 <div className="space-y-12 mt-8 pt-8 border-t border-gray-200">
                   {/* Rule-based */}
                   <div>
-                    <h4 className="text-xl text-gray-900 mb-4 font-medium">Rule-based Orchestrators</h4>
+                    <h4 className="text-xl text-gray-900 mb-4 leading-7 font-medium">Rule-based Orchestrators</h4>
                     <div className="mb-6">
                       <img
                         src="/Rule_based_Orchestrators.svg"
@@ -617,10 +617,10 @@ const FounderCasePage: React.FC = () => {
                   />
                 </div>
                 <div>
-                  <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+                  <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                     Positioning: Where My Orchestration Fits
                   </h2>
-                  <p className="text-lg text-gray-600 mb-6 font-normal">
+                  <p className="text-base text-gray-600 mb-6 leading-6 font-normal">
                     After mapping the orchestration landscape, a clear gap emerged between cloud-native platforms and AI-driven systems. This concept sits in the space between those models, starting with rule-based routing for immediate control and flexibility, while building the foundation for signal-based logic and future AI-assisted decisioning.
                   </p>
                 </div>
@@ -639,7 +639,7 @@ const FounderCasePage: React.FC = () => {
               <h2 className="text-3xl text-gray-900 mb-6 text-left font-medium">
                 Strategic Direction - Concept Evolution
               </h2>
-              <p className="text-lg text-gray-600 mb-12 text-left max-w-2xl font-normal">
+              <p className="text-base text-gray-600 mb-12 text-left max-w-2xl leading-6 font-normal">
                 This research-driven concept explores how an orchestration system could evolve from initial foundation to future intelligence. The purpose is not to present a finished product, but to demonstrate how insights from the market study inform thinking about architectural phases.
               </p>
 
