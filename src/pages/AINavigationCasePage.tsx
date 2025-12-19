@@ -89,8 +89,8 @@ const AINavigationCasePage: React.FC = () => {
 
         {/* 2) WHY AI NAVIGATION MATTERS */}
         <section className="py-24 lg:py-32">
-          <div className="container-custom">
-            <div className="max-w-[680px] mx-auto">
+          <div className="container-custom" style={{ maxWidth: '1180px' }}>
+            <div className="max-w-[680px]">
               <h2 className="text-3xl text-gray-900 mb-6 text-LEFT font-medium">
                 Why AI Navigation Matters
               </h2>
@@ -262,16 +262,16 @@ const AINavigationCasePage: React.FC = () => {
         {/* 4.5) SYSTEM BLUEPRINT - After screenshots */}
         <section className="py-32 lg:py-40 bg-white">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
-            <div className="max-w-[680px] mx-auto mb-16 text-left">
+            <div className="max-w-[680px] mb-16 text-left">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 AI Navigation as a System Layer
               </h2>
               <p className="text-lg text-gray-600 leading-relaxed font-normal">
                 This conceptual system overview illustrates how intent detection, intelligent routing, authentication handling, and user feedback work together to create a seamless navigation experience.
-              </p>
-            </div>
-          </div>
-          
+                    </p>
+                  </div>
+                </div>
+
           {/* Diagram container - full width */}
           <div className="w-full">
             <div className="container-custom mb-6">
@@ -282,12 +282,12 @@ const AINavigationCasePage: React.FC = () => {
               </div>
             </div>
             <div className="w-[70%] mx-auto">
-              <img
+                    <img
                 src="/AI_Navigation_as_a_System_Layer.svg"
                 alt="AI Navigation System Layer blueprint showing intent detection, routing, authentication, and feedback flows"
                 className="w-full h-auto"
-                loading="lazy"
-              />
+                      loading="lazy"
+                    />
             </div>
           </div>
         </section>
@@ -300,8 +300,8 @@ const AINavigationCasePage: React.FC = () => {
 
         {/* 5) IMPACT & DESIGN RATIONALE */}
         <section className="py-24 lg:py-32">
-          <div className="container-custom">
-            <div className="max-w-[680px] mx-auto mb-12 text-left">
+          <div className="container-custom" style={{ maxWidth: '1180px' }}>
+            <div className="max-w-[680px] mb-12 text-left">
               <h2 className="text-3xl text-gray-900 mb-4 font-medium">
                 Impact & Design Rationale
               </h2>
@@ -370,7 +370,7 @@ const AINavigationCasePage: React.FC = () => {
             </div>
 
             {/* MIDDLE ROW - Approach (horizontal, lightweight) */}
-            <div className="max-w-[680px] mx-auto mb-16">
+            <div className="max-w-[680px] mb-16">
               <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8">
                 <div className="flex items-start gap-3 flex-1">
                   <div className="flex-shrink-0 w-5 h-5 text-gray-900 mt-0.5">
@@ -412,7 +412,7 @@ const AINavigationCasePage: React.FC = () => {
             </div>
 
             {/* BOTTOM ROW - User Insights (condensed) */}
-            <div className="max-w-[680px] mx-auto">
+            <div className="max-w-[680px]">
               <h3 className="text-xl text-gray-900 mb-4 text-left font-medium">
                 User Insights
               </h3>
@@ -470,8 +470,8 @@ const AINavigationCasePage: React.FC = () => {
 
         {/* 10) FINAL CTA */}
         <section className="py-32 lg:py-40">
-          <div className="container-custom">
-            <div className="max-w-[680px] mx-auto text-left">
+          <div className="container-custom" style={{ maxWidth: '1180px' }}>
+            <div className="max-w-[680px] text-left">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 Interested in learning more?
               </h2>
