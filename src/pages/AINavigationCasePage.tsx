@@ -185,7 +185,7 @@ const AINavigationCasePage: React.FC = () => {
               </h2>
               <div className="max-w-[680px]">
                 <p className="text-lg text-gray-600 leading-relaxed mb-8 font-normal">
-                Grounded in a Zero UI approach, our AI model will translate user intent directly into outcomes, autonomously automating complex workflows without requiring users to operate traditional interfaces. With value-based pricing and continuous AI improvement, it will evolve into a self-running service that performs work, scales instantly, and minimises the need for explicit user interaction.
+                For this project, I conceptualized and designed an AI navigation system grounded in a Zero UI approach. The AI model will translate user intent directly into outcomes, autonomously automating complex workflows without requiring users to operate traditional interfaces. With value-based pricing and continuous AI improvement, it will evolve into a self-running service that performs work, scales instantly, and minimises the need for explicit user interaction.
                 </p>
               </div>
              

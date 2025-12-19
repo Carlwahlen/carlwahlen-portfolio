@@ -196,7 +196,7 @@ const FounderCasePage: React.FC = () => {
                   My Orchestration Concept
                 </h2>
                 <p className="text-lg text-gray-600 leading-relaxed font-normal">
-                  This concept explores a payment orchestration system that starts with rule-based routing for immediate control, while building toward signal-based logic and future AI-assisted decisioning. The goal is to provide merchants with flexible, resilient payment infrastructure that adapts as transaction data accumulates.
+                  For this project, I conceptualized and designed a payment orchestration system that starts with rule-based routing for immediate control, while building toward signal-based logic and future AI-assisted decisioning. The goal is to provide merchants with flexible, resilient payment infrastructure that adapts as transaction data accumulates.
                 </p>
               </div>
               <div className="w-full">
