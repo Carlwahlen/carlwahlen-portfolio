@@ -45,10 +45,10 @@ const AINavigationCasePage: React.FC = () => {
                 AI
                 </div>
                 
-              <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-tight">
+              <h1 className="text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-[56px] lg:leading-[64px]">
                   AI Navigation Engine
                 </h1>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8 font-normal max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 leading-7 mb-8 font-normal max-w-2xl mx-auto">
                 Prototype for intent-based navigation enabling users to search naturally, without knowing the website's structure or terminology.
                 </p>
                 
@@ -91,11 +91,11 @@ const AINavigationCasePage: React.FC = () => {
         <section className="py-24 lg:py-32">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px]">
-              <h2 className="text-3xl text-gray-900 mb-6 text-LEFT font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] text-left font-medium">
                 Why AI Navigation Matters
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left font-normal">
+              <p className="text-base text-gray-600 leading-6 mb-12 text-left font-normal">
                 Many complex websites are well-designed and fully accessible, yet users still struggle to find what they need because they search using everyday language that does not match the site's internal terminology. This mismatch between user intent and organizational structure creates a persistent navigation barrier.
               </p>
               
@@ -107,7 +107,7 @@ const AINavigationCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Traditional menus require knowing structure to find info</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Traditional menus require knowing structure to find info</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -180,11 +180,11 @@ const AINavigationCasePage: React.FC = () => {
         <section className="py-24 lg:py-32 bg-gray-50">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="mb-16">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 Concept: My Approach
               </h2>
               <div className="max-w-[680px]">
-                <p className="text-lg text-gray-600 leading-relaxed mb-8 font-normal">
+                <p className="text-base text-gray-600 leading-6 mb-8 font-normal">
                 For this project, I conceptualized and designed an AI navigation system grounded in a Zero UI approach. The AI model will translate user intent directly into outcomes, autonomously automating complex workflows without requiring users to operate traditional interfaces. With value-based pricing and continuous AI improvement, it will evolve into a self-running service that performs work, scales instantly, and minimises the need for explicit user interaction.
                 </p>
               </div>
@@ -196,10 +196,10 @@ const AINavigationCasePage: React.FC = () => {
               {/* Intent Detection - Text left, Screenshot right */}
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="max-w-[680px]">
-                  <h3 className="text-2xl text-gray-900 mb-4 font-medium">
+                  <h3 className="text-xl text-gray-900 mb-4 leading-7 font-medium">
                     Intent Detection
                   </h3>
-                  <p className="text-gray-700 mb-4 font-normal">
+                  <p className="text-base text-gray-700 mb-4 leading-6 font-normal">
                     The AI Navigation Engine uses natural language processing to understand user goals from natural language, interpreting meaning rather than exact keywords or terminology. It provides confidence scoring for search result relevance and handles conversational queries and follow-up questions.
                   </p>
                 </div>
@@ -224,10 +224,10 @@ const AINavigationCasePage: React.FC = () => {
                   />
                 </div>
                 <div className="order-1 lg:order-2 max-w-[680px]">
-                  <h3 className="text-2xl text-gray-900 mb-4 font-medium">
+                  <h3 className="text-xl text-gray-900 mb-4 leading-7 font-medium">
                     Flow-Based Guidance
                   </h3>
-                  <p className="text-gray-700 mb-4 font-normal">
+                  <p className="text-base text-gray-700 mb-4 leading-6 font-normal">
                     The system provides dynamic step-by-step navigation tailored to user needs, with conditional visibility based on user context. It enables seamless transitions between authentication and destination, supporting multi-step flows with branching logic.
                   </p>
                 </div>
@@ -236,10 +236,10 @@ const AINavigationCasePage: React.FC = () => {
               {/* Context Awareness - Text left, Screenshot right */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="max-w-[680px]">
-                  <h3 className="text-2xl text-gray-900 mb-4 font-medium">
+                  <h3 className="text-xl text-gray-900 mb-4 leading-7 font-medium">
                     Context Awareness
                   </h3>
-                  <p className="text-gray-700 mb-4 font-normal">
+                  <p className="text-base text-gray-700 mb-4 leading-6 font-normal">
                     The navigation system maintains session tracking and state management across flows, with device and language adaptation. It provides personalized suggestions based on user behavior and maintains context through authentication steps.
                   </p>
                 </div>
@@ -262,19 +262,17 @@ const AINavigationCasePage: React.FC = () => {
         {/* 4.5) SYSTEM BLUEPRINT - After screenshots */}
         <section className="py-32 lg:py-40 bg-white">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
-            <div className="max-w-[680px] mb-16 text-left">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
-                AI Navigation as a System Layer
-              </h2>
-              <p className="text-lg text-gray-600 leading-relaxed font-normal">
-                This conceptual system overview illustrates how intent detection, intelligent routing, authentication handling, and user feedback work together to create a seamless navigation experience.
-                    </p>
-                  </div>
-                </div>
-
-          {/* Diagram container - matches content width */}
-          <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px]">
+              <div className="mb-16 text-left">
+                <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
+                  AI Navigation as a System Layer
+                </h2>
+                <p className="text-base text-gray-600 leading-6 font-normal">
+                  This conceptual system overview illustrates how intent detection, intelligent routing, authentication handling, and user feedback work together to create a seamless navigation experience.
+                </p>
+              </div>
+
+              {/* Diagram container - matches content width */}
               <div className="text-left mb-6">
                 <span className="text-sm text-gray-500 font-normal">
                   System-level blueprint (conceptual)
@@ -302,10 +300,10 @@ const AINavigationCasePage: React.FC = () => {
         <section className="py-24 lg:py-32">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px] mb-12 text-left">
-              <h2 className="text-3xl text-gray-900 mb-4 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-4 leading-[40px] font-medium">
                 Impact & Design Rationale
               </h2>
-              <p className="text-base text-gray-600 leading-relaxed font-normal">
+              <p className="text-base text-gray-600 leading-6 font-normal">
                 This section summarizes the value of the solution, the approach behind it, and the user insights that informed key decisions.
               </p>
             </div>
@@ -413,26 +411,26 @@ const AINavigationCasePage: React.FC = () => {
 
             {/* BOTTOM ROW - User Insights (condensed) */}
             <div className="max-w-[680px]">
-              <h3 className="text-xl text-gray-900 mb-4 text-left font-medium">
+              <h3 className="text-xl text-gray-900 mb-4 leading-7 text-left font-medium">
                 User Insights
               </h3>
               
               <ul className="space-y-2 mb-6">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-base text-gray-700 font-normal">Users search based on goals and natural language, not menu labels or internal terminology</p>
+                  <p className="text-base text-gray-700 leading-6 font-normal">Users search based on goals and natural language, not menu labels or internal terminology</p>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-base text-gray-700 font-normal">Users expect conversational interfaces that understand intent, not hierarchical navigation systems</p>
+                  <p className="text-base text-gray-700 leading-6 font-normal">Users expect conversational interfaces that understand intent, not hierarchical navigation systems</p>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-base text-gray-700 font-normal">Task completion rates significantly increase when systems interpret user intent rather than requiring exact keyword matches</p>
+                  <p className="text-base text-gray-700 leading-6 font-normal">Task completion rates significantly increase when systems interpret user intent rather than requiring exact keyword matches</p>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-gray-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <p className="text-base text-gray-700 font-normal">Users respond faster to AI-powered suggestions than traditional dropdown menus and filter trees</p>
+                  <p className="text-base text-gray-700 leading-6 font-normal">Users respond faster to AI-powered suggestions than traditional dropdown menus and filter trees</p>
                 </li>
               </ul>
               
@@ -472,10 +470,10 @@ const AINavigationCasePage: React.FC = () => {
         <section className="py-32 lg:py-40">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px] text-left">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 Interested in learning more?
               </h2>
-              <p className="text-lg text-gray-600 mb-10 leading-relaxed font-normal">
+              <p className="text-base text-gray-600 mb-10 leading-6 font-normal">
                 Let's discuss how I can help build scalable, user-centric solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-start">
