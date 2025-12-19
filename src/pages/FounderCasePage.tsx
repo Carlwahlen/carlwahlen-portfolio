@@ -152,33 +152,37 @@ const FounderCasePage: React.FC = () => {
               </div>
 
               {/* Small diagram row */}
-              <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 pt-8 border-t border-gray-200">
-                <div className="flex-1 text-center">
-                  <p className="text-sm font-medium text-gray-900 mb-2">PSP</p>
-                <img
-                  src="/psp_flow.svg"
-                    alt="Traditional single PSP flow"
-                    className="w-full mb-2"
-                    loading="lazy"
-                  />
-                  <p className="text-sm text-gray-600">Current routing</p>
+              <div className="flex flex-col md:flex-row items-start justify-center gap-6 md:gap-8 pt-8 border-t border-gray-200">
+                <div className="flex-1">
+                  <h3 className="text-xl text-gray-900 mb-4 text-left font-medium">PSP</h3>
+                  <div className="text-center">
+                    <img
+                      src="/psp_flow.svg"
+                      alt="Traditional single PSP flow"
+                      className="w-full mb-2"
+                      loading="lazy"
+                    />
+                    <p className="text-sm text-gray-600">Current routing</p>
+                  </div>
                 </div>
                 
-                <div className="flex-shrink-0">
+                <div className="flex-shrink-0 pt-8 md:pt-12">
                   <svg className="w-8 h-8 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </div>
                 
-                <div className="flex-1 text-center">
-                  <p className="text-sm font-medium text-gray-900 mb-2">Payment Orchestration</p>
-                  <img
-                    src="/paymenOrchestration_flow.svg"
-                    alt="Payment orchestration flow with multiple PSPs"
-                    className="w-full mb-2"
-                    loading="lazy"
-                  />
-                  <p className="text-sm text-gray-600">Orchestrated routing</p>
+                <div className="flex-1">
+                  <h3 className="text-xl text-gray-900 mb-4 text-left font-medium">Payment Orchestration</h3>
+                  <div className="text-center">
+                    <img
+                      src="/paymenOrchestration_flow.svg"
+                      alt="Payment orchestration flow with multiple PSPs"
+                      className="w-full mb-2"
+                      loading="lazy"
+                    />
+                    <p className="text-sm text-gray-600">Orchestrated routing</p>
+                  </div>
                 </div>
               </div>
             </div>
