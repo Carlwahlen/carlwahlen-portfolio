@@ -21,10 +21,10 @@ const PortfolioCasePage: React.FC = () => {
                 Web Development
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-tight">
+              <h1 className="text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-[56px] lg:leading-[64px]">
                   Portfolio Website
                 </h1>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8 font-normal max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 leading-7 mb-8 font-normal max-w-2xl mx-auto">
                 Custom-built portfolio demonstrating technical execution, modern React/TypeScript architecture, and UX-centered design.
                 </p>
                 
@@ -105,7 +105,7 @@ const PortfolioCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Built from scratch without WordPress or drag-and-drop tools</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Built from scratch without WordPress or drag-and-drop tools</p>
                   </div>
                 
                   <div className="flex items-start">
@@ -114,7 +114,7 @@ const PortfolioCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Component-based architecture for maintainable code</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Component-based architecture for maintainable code</p>
               </div>
               
                 <div className="flex items-start">
@@ -123,7 +123,7 @@ const PortfolioCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Fast load times and Core Web Vitals optimization</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Fast load times and Core Web Vitals optimization</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -132,7 +132,7 @@ const PortfolioCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Comprehensive SEO with structured data</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Comprehensive SEO with structured data</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -141,7 +141,7 @@ const PortfolioCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">WCAG-compliant accessible design</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">WCAG-compliant accessible design</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -150,7 +150,7 @@ const PortfolioCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Consistent design system with reusable components</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Consistent design system with reusable components</p>
                 </div>
               </div>
             </div>
@@ -169,10 +169,10 @@ const PortfolioCasePage: React.FC = () => {
         <section className="py-24 lg:py-32 bg-gray-50">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px] mx-auto mb-16 text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 Concept: My Approach
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed font-normal">
+                <p className="text-base text-gray-600 leading-6 font-normal">
                 Built with a focus on technical excellence, performance optimization, and user-centered design. The architecture prioritizes maintainability, scalability, and best practices for modern web development.
               </p>
             </div>
@@ -258,7 +258,7 @@ const PortfolioCasePage: React.FC = () => {
         <section className="py-24 lg:py-32">
           <div className="container-custom">
             <div className="max-w-[680px] mx-auto mb-12 text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 What This Solution Enables
               </h2>
             </div>
@@ -330,7 +330,7 @@ const PortfolioCasePage: React.FC = () => {
         <section className="py-24 lg:py-32 bg-gray-50">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px] mx-auto mb-12 text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 How I Approached the Problem
               </h2>
             </div>
@@ -406,7 +406,7 @@ const PortfolioCasePage: React.FC = () => {
         <section className="py-24 lg:py-32">
           <div className="container-custom">
             <div className="max-w-[680px] mx-auto mb-12 text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 Results & Metrics
               </h2>
             </div>
@@ -452,7 +452,7 @@ const PortfolioCasePage: React.FC = () => {
         <section className="py-32 lg:py-40">
           <div className="container-custom">
             <div className="max-w-[680px] mx-auto text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 Interested in learning more?
             </h2>
               <p className="text-lg text-gray-600 mb-10 leading-relaxed font-normal">
