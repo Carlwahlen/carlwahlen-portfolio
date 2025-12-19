@@ -21,10 +21,10 @@ const StyleScandinaviaCasePage: React.FC = () => {
                 Web Development + Internship
               </div>
               
-              <h1 className="text-4xl md:text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-tight">
+              <h1 className="text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-[56px] lg:leading-[64px]">
                   Style Scandinavia
                 </h1>
-              <p className="text-xl text-gray-600 leading-relaxed mb-8 font-normal max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 leading-7 mb-8 font-normal max-w-2xl mx-auto">
                 UX/SEO rebuild with measurable results: +20% traffic first week, improved IA, templates and WCAG thinking.
                 </p>
                 
@@ -67,11 +67,11 @@ const StyleScandinaviaCasePage: React.FC = () => {
         <section className="py-24 lg:py-32">
           <div className="container-custom">
             <div className="max-w-[680px] mx-auto">
-              <h2 className="text-3xl text-gray-900 mb-6 text-left font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] text-left font-medium">
                 Why This Matters
               </h2>
               
-              <p className="text-lg text-gray-600 leading-relaxed mb-12 text-left font-normal">
+              <p className="text-base text-gray-600 leading-6 mb-12 text-left font-normal">
                 A complete rebuild of Style Scandinavia's digital presence focusing on user experience, search optimization, and accessibility. The project resulted in measurable improvements already in the first week.
               </p>
               
@@ -83,7 +83,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Poor user experience limiting engagement and conversions</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Poor user experience limiting engagement and conversions</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -92,7 +92,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Slow page speed impacting user satisfaction and rankings</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Slow page speed impacting user satisfaction and rankings</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -101,7 +101,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Low SEO performance limiting organic traffic growth</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Low SEO performance limiting organic traffic growth</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -110,7 +110,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                 </div>
-                  <p className="text-lg text-gray-700 font-normal">Accessibility barriers preventing inclusive user experience</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Accessibility barriers preventing inclusive user experience</p>
             </div>
 
                 <div className="flex items-start">
@@ -119,7 +119,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">Outdated information architecture causing navigation confusion</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">Outdated information architecture causing navigation confusion</p>
                 </div>
                 
                 <div className="flex items-start">
@@ -128,7 +128,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
-                  <p className="text-lg text-gray-700 font-normal">No scalable content system for future development</p>
+                  <p className="text-base text-gray-700 font-normal leading-6">No scalable content system for future development</p>
                 </div>
               </div>
             </div>
@@ -147,10 +147,10 @@ const StyleScandinaviaCasePage: React.FC = () => {
         <section className="py-24 lg:py-32 bg-gray-50">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px] mx-auto mb-16 text-left">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 Concept: My Approach
               </h2>
-              <p className="text-lg text-gray-600 leading-relaxed font-normal">
+              <p className="text-base text-gray-600 leading-6 font-normal">
                 Strategic combination of UX/UI design, SEO optimization, WCAG compliance, and content strategy to rebuild the digital presence with measurable results.
               </p>
             </div>
@@ -236,7 +236,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
         <section className="py-24 lg:py-32">
           <div className="container-custom">
             <div className="max-w-[680px] mx-auto mb-12 text-left">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 What This Solution Enables
               </h2>
                   </div>
@@ -248,7 +248,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="text-lg font-medium text-gray-900 mb-3">Improved IA</h3>
+                <h3 className="text-xl font-medium text-gray-900 mb-3 leading-7">Improved IA</h3>
                 <ul className="space-y-2 text-gray-600 text-sm font-normal">
                   <li>• Better navigation structure</li>
                   <li>• Clearer content organization</li>
@@ -308,7 +308,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
         <section className="py-24 lg:py-32 bg-gray-50">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
             <div className="max-w-[680px] mx-auto mb-12 text-left">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 How I Approached the Problem
               </h2>
               </div>
@@ -385,7 +385,7 @@ const StyleScandinaviaCasePage: React.FC = () => {
         <section className="py-24 lg:py-32">
           <div className="container-custom">
             <div className="max-w-[680px] mx-auto mb-12 text-left">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 Results & Metrics
               </h2>
             </div>
@@ -422,10 +422,10 @@ const StyleScandinaviaCasePage: React.FC = () => {
         <section className="py-32 lg:py-40">
           <div className="container-custom">
             <div className="max-w-[680px] mx-auto text-center">
-              <h2 className="text-3xl text-gray-900 mb-6 font-medium">
+              <h2 className="text-[32px] text-gray-900 mb-6 leading-[40px] font-medium">
                 Interested in learning more?
             </h2>
-              <p className="text-lg text-gray-600 mb-10 leading-relaxed font-normal">
+              <p className="text-base text-gray-600 mb-10 leading-6 font-normal">
                 Let's discuss how I can help build scalable, user-centric solutions.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
