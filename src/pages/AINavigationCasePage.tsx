@@ -270,22 +270,24 @@ const AINavigationCasePage: React.FC = () => {
                 This conceptual system overview illustrates how intent detection, intelligent routing, authentication handling, and user feedback work together to create a seamless navigation experience.
               </p>
             </div>
-            
-            {/* Diagram container - matches text content width */}
-            <div className="max-w-[680px] mx-auto">
-              <div className="text-center mb-6">
+          </div>
+          
+          {/* Diagram container - full width */}
+          <div className="w-full">
+            <div className="container-custom mb-6">
+              <div className="text-center">
                 <span className="text-sm text-gray-500 font-normal">
                   System-level blueprint (conceptual)
                 </span>
               </div>
-              <div className="w-full">
-                <img
-                  src="/AI_Navigation_as_a_System_Layer.svg"
-                  alt="AI Navigation System Layer blueprint showing intent detection, routing, authentication, and feedback flows"
-                  className="w-full h-auto"
-                  loading="lazy"
-                />
-              </div>
+            </div>
+            <div className="w-full">
+              <img
+                src="/AI_Navigation_as_a_System_Layer.svg"
+                alt="AI Navigation System Layer blueprint showing intent detection, routing, authentication, and feedback flows"
+                className="w-full h-auto"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>
