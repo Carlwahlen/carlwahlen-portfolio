@@ -272,22 +272,22 @@ const AINavigationCasePage: React.FC = () => {
                   </div>
                 </div>
 
-          {/* Diagram container - full width */}
-          <div className="w-full">
-            <div className="container-custom mb-6">
-              <div className="text-left">
+          {/* Diagram container - matches content width */}
+          <div className="container-custom" style={{ maxWidth: '1180px' }}>
+            <div className="max-w-[680px]">
+              <div className="text-left mb-6">
                 <span className="text-sm text-gray-500 font-normal">
                   System-level blueprint (conceptual)
                 </span>
               </div>
-            </div>
-            <div className="w-[70%] mx-auto">
-                    <img
-                src="/AI_Navigation_as_a_System_Layer.svg"
-                alt="AI Navigation System Layer blueprint showing intent detection, routing, authentication, and feedback flows"
-                className="w-full h-auto"
-                      loading="lazy"
-                    />
+              <div>
+                <img
+                  src="/AI_Navigation_as_a_System_Layer.svg"
+                  alt="AI Navigation System Layer blueprint showing intent detection, routing, authentication, and feedback flows"
+                  className="w-full h-auto"
+                  loading="lazy"
+                />
+              </div>
             </div>
           </div>
         </section>
