@@ -262,7 +262,7 @@ const AINavigationCasePage: React.FC = () => {
         {/* 4.5) SYSTEM BLUEPRINT - After screenshots */}
         <section className="py-32 lg:py-40 bg-white">
           <div className="container-custom" style={{ maxWidth: '1180px' }}>
-            <div className="max-w-[680px] mx-auto mb-16 text-center">
+            <div className="max-w-[680px] mx-auto mb-16 text-left">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 AI Navigation as a System Layer
               </h2>
@@ -275,7 +275,7 @@ const AINavigationCasePage: React.FC = () => {
           {/* Diagram container - full width */}
           <div className="w-full">
             <div className="container-custom mb-6">
-              <div className="text-center">
+              <div className="text-left">
                 <span className="text-sm text-gray-500 font-normal">
                   System-level blueprint (conceptual)
                 </span>
@@ -301,7 +301,7 @@ const AINavigationCasePage: React.FC = () => {
         {/* 5) IMPACT & DESIGN RATIONALE */}
         <section className="py-24 lg:py-32">
           <div className="container-custom">
-            <div className="max-w-[680px] mx-auto mb-12 text-center">
+            <div className="max-w-[680px] mx-auto mb-12 text-left">
               <h2 className="text-3xl text-gray-900 mb-4 font-medium">
                 Impact & Design Rationale
               </h2>
@@ -471,14 +471,14 @@ const AINavigationCasePage: React.FC = () => {
         {/* 10) FINAL CTA */}
         <section className="py-32 lg:py-40">
           <div className="container-custom">
-            <div className="max-w-[680px] mx-auto text-center">
+            <div className="max-w-[680px] mx-auto text-left">
               <h2 className="text-3xl text-gray-900 mb-6 font-medium">
                 Interested in learning more?
               </h2>
               <p className="text-lg text-gray-600 mb-10 leading-relaxed font-normal">
                 Let's discuss how I can help build scalable, user-centric solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-start">
               <Link 
                 to="/contact" 
                 className="btn-primary text-lg px-8 py-4"
