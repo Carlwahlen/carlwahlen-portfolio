@@ -281,7 +281,7 @@ const AINavigationCasePage: React.FC = () => {
                 </span>
               </div>
             </div>
-            <div className="w-full">
+            <div className="w-[70%] mx-auto">
               <img
                 src="/AI_Navigation_as_a_System_Layer.svg"
                 alt="AI Navigation System Layer blueprint showing intent detection, routing, authentication, and feedback flows"
