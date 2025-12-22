@@ -41,7 +41,7 @@ const FounderCasePage: React.FC = () => {
             <div className="text-center w-full">
               {/* Badge */}
               <div className="inline-flex items-center px-3 py-1.5 bg-gray-100 text-gray-700 rounded-full text-xs font-medium mb-6">
-                UI Prototype + Market Research
+                Market Research + MVP development
               </div>
               
               <h1 className="text-5xl lg:text-6xl text-gray-900 mb-6 font-medium leading-[56px] lg:leading-[64px]">

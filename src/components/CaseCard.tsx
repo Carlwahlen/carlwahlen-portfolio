@@ -58,7 +58,11 @@ const CaseCard: React.FC<CaseCardProps> = ({ caseItem }) => {
           
           {/* Category Badge */}
           <div className="absolute left-4 top-3 bg-gray-900/90 backdrop-blur-sm text-white font-semibold rounded-full shadow-lg px-4 py-1.5 text-xs">
-            {caseItem.id === 'style-scandinavia' ? 'Web Development + Internship' : caseItem.category}
+            {caseItem.id === 'style-scandinavia' 
+              ? 'Web Development + Internship' 
+              : caseItem.id === 'payment-orchestration'
+              ? 'Market Research + MVP development'
+              : caseItem.category}
           </div>
         </div>
         
