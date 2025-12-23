@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { servicesEnabled } from '../utils/featureFlags';
 
 // Check if user has consented to analytics cookies (GDPR compliance)
 const hasAnalyticsConsent = (): boolean => {
@@ -68,13 +69,22 @@ interface NavigateResponse {
 const EXAMPLE_PROMPTS = [
   'Show me your case studies',
   'I want to contact you',
-  'What services do you offer',
+  'Show me the AI Navigation case',
   'Tell me about yourself',
 ];
 
 const AINavigationDemoWidget: React.FC = () => {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  // Map deprecated targets to live destinations (e.g., Services -> AI Navigation)
+  const mapDeprecatedTarget = (target?: string): string | undefined => {
+    if (!target) return target;
+    if (!servicesEnabled && target.startsWith('/services')) {
+      return '/case/ai-navigation';
+    }
+    return target;
+  };
+
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
       id: 'initial',
@@ -172,12 +182,19 @@ const AINavigationDemoWidget: React.FC = () => {
         }
       }
 
+      const mappedTargetUrl = mapDeprecatedTarget(data.targetUrl);
+
+      // If we remap a deprecated target (like /services), let the user know where we send them.
+      if (mappedTargetUrl && mappedTargetUrl !== data.targetUrl) {
+        assistantContent += `\n\nRouting you to the AI Navigation case instead of the old Services page.`;
+      }
+
       const assistantMessage: ChatMessage = {
         id: `assistant-${Date.now()}`,
         role: 'assistant',
         content: assistantContent,
         createdAt: new Date(),
-        targetUrl: data.targetUrl,
+        targetUrl: mappedTargetUrl,
         intent: data.intent,
         confidence: data.confidence,
       };
@@ -185,13 +202,13 @@ const AINavigationDemoWidget: React.FC = () => {
       setMessages((prev) => [...prev, assistantMessage]);
 
       // Navigate immediately if targetUrl is provided
-      if (data.targetUrl) {
+      if (mappedTargetUrl) {
         // Handle routing (support both old /#/ paths and new / paths)
-        const url = data.targetUrl.startsWith('/#')
-          ? data.targetUrl.substring(2) // Remove /# prefix for React Router compatibility
-          : data.targetUrl.startsWith('/')
-          ? data.targetUrl
-          : `/${data.targetUrl}`;
+        const url = mappedTargetUrl.startsWith('/#')
+          ? mappedTargetUrl.substring(2) // Remove /# prefix for React Router compatibility
+          : mappedTargetUrl.startsWith('/')
+          ? mappedTargetUrl
+          : `/${mappedTargetUrl}`;
 
         // Small delay before navigation to ensure widget is closed
         setTimeout(() => {
