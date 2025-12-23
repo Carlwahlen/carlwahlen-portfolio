@@ -124,8 +124,7 @@ const Home: React.FC = () => {
                   {/* Large title - similar to Samuel Oldmark's style */}
                   <h1 className="text-5xl md:text-6xl lg:text-7xl text-gray-900 mb-6 leading-tight font-medium">
                     UX Designer<br />
-                    with product focus<br />
-                    focus
+                    with product focus
             </h1>
             
                   {/* Short description */}
