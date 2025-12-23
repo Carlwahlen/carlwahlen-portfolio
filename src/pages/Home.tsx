@@ -19,7 +19,7 @@ const Home: React.FC = () => {
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://carlwahlen.com/" />
-        <meta property="og:title" content="Carl Wahlen - UX Designer with Product Focus" />
+        <meta property="og:title" content="Carl Wahlén - UX Designer with Product Focus" />
         <meta property="og:description" content="UX Designer with Product Focus based in Stockholm, Sweden. Build digital products by framing problems, mapping user journeys, and making clear MVP decisions." />
         <meta property="og:image" content="https://carlwahlen.com/og-image.jpg" />
         <meta property="og:image:width" content="1200" />
@@ -29,7 +29,7 @@ const Home: React.FC = () => {
         {/* Twitter */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content="https://carlwahlen.com/" />
-        <meta property="twitter:title" content="Carl Wahlen - UX Designer with Product Focus" />
+        <meta property="twitter:title" content="Carl Wahlén - UX Designer with Product Focus" />
         <meta property="twitter:description" content="UX Designer with Product Focus based in Stockholm, Sweden. Build digital products by framing problems, mapping user journeys, and making clear MVP decisions." />
         <meta property="twitter:image" content="https://carlwahlen.com/og-image.jpg" />
 
@@ -49,7 +49,7 @@ const Home: React.FC = () => {
           "description": "Product strategy consultant specializing in data-driven products, UX/UI design, business development, and technology strategy",
           "founder": {
             "@type": "Person",
-            "name": "Carl Wahlen",
+            "name": "Carl Wahlén",
             "jobTitle": "UX Designer with Product Focus"
           },
           "sameAs": [
@@ -88,18 +88,18 @@ const Home: React.FC = () => {
       
       <main>
         {/* Hero Section - Inspired by Samuel Oldmark but with your design system */}
-        <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 hero-gradient relative overflow-hidden">
-          {/* Tile pattern background - perfectly structured grid with diamonds at intersections */}
-          <div 
-            className="absolute inset-0 opacity-[0.08]"
-            style={{
-              backgroundImage: `
-                url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='tile-hero-home' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Crect width='80' height='80' fill='transparent'/%3E%3Cline x1='0' y1='0' x2='80' y2='0' stroke='%231f2937' stroke-width='0.5'/%3E%3Cline x1='0' y1='0' x2='0' y2='80' stroke='%231f2937' stroke-width='0.5'/%3E%3Cpolygon points='0,0 3,3 0,6 -3,3' fill='%231f2937'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23tile-hero-home)'/%3E%3C/svg%3E")
-              `,
-              backgroundSize: '80px 80px',
-            }}
-          />
-          <div className="container-custom relative z-10">
+      <section className="pt-24 pb-16 lg:pt-32 lg:pb-24 hero-gradient relative overflow-hidden">
+        {/* Tile pattern background - perfectly structured grid with diamonds at intersections */}
+        <div 
+          className="absolute inset-0 opacity-[0.08]"
+          style={{
+            backgroundImage: `
+              url("data:image/svg+xml,%3Csvg width='80' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='tile-hero-home' width='80' height='80' patternUnits='userSpaceOnUse'%3E%3Crect width='80' height='80' fill='transparent'/%3E%3Cline x1='0' y1='0' x2='80' y2='0' stroke='%231f2937' stroke-width='0.5'/%3E%3Cline x1='0' y1='0' x2='0' y2='80' stroke='%231f2937' stroke-width='0.5'/%3E%3Cpolygon points='0,0 3,3 0,6 -3,3' fill='%231f2937'/%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%25' height='100%25' fill='url(%23tile-hero-home)'/%3E%3C/svg%3E")
+            `,
+            backgroundSize: '80px 80px',
+          }}
+        />
+        <div className="container-custom relative z-10">
             <div className="max-w-4xl mx-auto">
               <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
                 {/* Profile Image - Circular, similar to Samuel Oldmark */}
@@ -117,8 +117,8 @@ const Home: React.FC = () => {
                       loading="eager"
                     />
                   </div>
-                </div>
-                
+            </div>
+            
                 {/* Text Content */}
                 <div className="flex-1 text-center lg:text-left">
                   {/* Large title - similar to Samuel Oldmark's style */}
@@ -126,12 +126,12 @@ const Home: React.FC = () => {
                     UX Designer<br />
                     with Product<br />
                     Focus
-                  </h1>
-                  
+            </h1>
+            
                   {/* Short description */}
                   <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                     <span className="md:inline block">
-                      Build digital products by framing problems and
+                      Build digital products by framing problems,
                     </span>{' '}
                     <span className="md:inline block">
                       mapping user journeys, and making
@@ -152,24 +152,24 @@ const Home: React.FC = () => {
                       to="/contact"
                       className="btn-primary text-base px-8 py-3.5 rounded-full font-medium"
                     >
-                      Let's talk
-                    </Link>
+                Let's talk
+              </Link>
                     <Link
                       to="/about"
                       className="btn-secondary text-base px-8 py-3.5 rounded-full font-medium"
                     >
                       About me
-                    </Link>
-                  </div>
-                </div>
-              </div>
+              </Link>
             </div>
           </div>
-        </section>
+              </div>
+          </div>
+        </div>
+      </section>
 
         {/* Recent work section - Inspired by Samuel Oldmark */}
-        <section className="py-16 lg:py-24 bg-white">
-          <div className="container-custom">
+      <section className="py-16 lg:py-24 bg-white">
+        <div className="container-custom">
             <div className="flex items-center justify-between mb-12">
               <h2 className="text-3xl md:text-4xl text-gray-900 font-medium">
                 Recent work
@@ -200,9 +200,9 @@ const Home: React.FC = () => {
               {recentCases.map((caseItem) => (
                 <CaseCard key={caseItem.id} caseItem={caseItem} />
               ))}
-            </div>
           </div>
-        </section>
+        </div>
+      </section>
 
       {/* Navigation & Contact Section */}
       <section className="py-16 bg-gray-50 relative overflow-hidden">
