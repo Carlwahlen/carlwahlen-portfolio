@@ -210,7 +210,7 @@ const About: React.FC = () => {
               {/* Right Column - Longer Text */}
               <div className="space-y-12">
                 <p className="text-base text-gray-700 leading-relaxed">
-                  I'm a product strategist and ux consultant and Master's student in User Experience and Interactive Media Design, working at the intersection of product structure, UX and early stage development. I focus on turning complex or unclear situations into understandable, user centered solutions that support real business goals.
+                  I'm a UX Designe with product focus and Master's student in User Experience and Interactive Media Design, working at the intersection of product structure, UX and early stage development. I focus on turning complex or unclear situations into understandable, user centered solutions that support real business goals.
                   </p>
                 <p className="text-base text-gray-700 leading-relaxed">
                   Based in Stockholm, I enjoy working with products that involve many moving parts, whether it is a messy user journey, a new service that needs structure, or an MVP that requires clear definition. My approach combines strategic thinking with hands on problem solving, ensuring decisions are grounded in user needs, organisational goals and practical implementation realities.
