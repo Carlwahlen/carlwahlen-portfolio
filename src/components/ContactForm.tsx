@@ -160,19 +160,19 @@ const ContactForm: React.FC = () => {
       </div>
       
       <div className="mb-6">
-        <label htmlFor="email" className="form-label">
-          Email *
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          required
-          className="form-input"
-          placeholder="your@email.com"
-        />
+          <label htmlFor="email" className="form-label">
+            Email *
+          </label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={formData.email}
+            onChange={handleInputChange}
+            required
+            className="form-input"
+            placeholder="your@email.com"
+          />
       </div>
       
       <div className="mb-6">
