@@ -77,7 +77,7 @@ const CaseCard: React.FC<CaseCardProps> = ({ caseItem }) => {
           
           {/* CTA */}
           <div className="mt-auto flex items-center font-semibold text-gray-900 group-hover:text-gray-700 transition-colors text-sm">
-            <span>{isContactLink ? 'Request demo/README' : 'Read case study'}</span>
+            <span>{isContactLink ? 'Request demo/README' : 'View case'}</span>
             <svg 
               className="ml-2 group-hover:translate-x-2 transition-transform duration-300" 
               fill="none" 
